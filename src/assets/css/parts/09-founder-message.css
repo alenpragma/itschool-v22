@@ -1,0 +1,22 @@
+/* --------------------------------------------------------------------------
+   9. Founder message
+   -------------------------------------------------------------------------- */
+.founder{background:var(--ink);color:var(--cream);border-radius:var(--radius-lg);overflow:hidden;position:relative}
+.founder::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(14,124,107,.55),transparent 70%);top:-160px;right:-100px}
+.founder-inner{position:relative;display:grid;grid-template-columns:.72fr 1.28fr;gap:56px;align-items:center;padding:64px}
+.founder-photo{position:relative}
+.founder-photo img{width:100%;aspect-ratio:.86;object-fit:cover;border-radius:26px;border:1px solid rgba(255,255,255,.14)}
+.founder-photo .badge{
+  position:absolute;bottom:-16px;right:-14px;background:var(--amber);color:var(--ink);
+  padding:12px 18px;border-radius:16px;box-shadow:var(--shadow-md);
+}
+.founder-photo .badge small{display:block;font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.founder-photo .badge b{font-size:14px}
+.founder h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin-top:16px;color:var(--cream)}
+.founder h2 em{font-style:normal;color:var(--amber)}
+.founder blockquote{margin-top:24px;font-size:1.12rem;line-height:1.75;color:rgba(251,247,240,.82);max-width:56ch}
+.founder .sig{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
+.founder .sig b{font-size:16px}
+.founder .sig span{display:block;font-size:13px;color:#8FD8C9;margin-top:2px}
+

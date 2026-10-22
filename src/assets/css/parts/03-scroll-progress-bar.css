@@ -1,0 +1,6 @@
+/* --------------------------------------------------------------------------
+   3. Scroll progress bar
+   -------------------------------------------------------------------------- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1200;
+  background:linear-gradient(90deg,var(--teal),var(--amber));transition:width .1s linear}
+

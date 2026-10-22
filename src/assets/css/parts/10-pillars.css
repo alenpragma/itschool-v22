@@ -1,0 +1,20 @@
+/* --------------------------------------------------------------------------
+   10. Pillars
+   -------------------------------------------------------------------------- */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.pillar{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;
+  position:relative;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s;
+}
+.pillar:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:transparent}
+.pillar .num{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--teal);letter-spacing:.05em}
+.pillar h3{font-size:1.35rem;margin-top:20px;font-weight:800;letter-spacing:-.02em}
+.pillar p{margin-top:12px;color:var(--muted);font-size:.95rem}
+.pillar .bar{display:block;width:46px;height:4px;border-radius:4px;background:var(--amber);margin-top:22px;transition:width .4s var(--ease)}
+.pillar:hover .bar{width:80px}
+.pillar .corner{position:absolute;top:0;right:0;width:78px;height:78px;border-bottom-left-radius:60px;background:var(--teal-soft);transition:background .4s}
+.pillar:nth-child(2) .corner{background:var(--amber-soft)}
+.pillar:nth-child(3) .corner{background:var(--coral-soft)}
+.pillar:nth-child(2) .num{color:#B87A0E}
+.pillar:nth-child(3) .num{color:var(--coral)}
+

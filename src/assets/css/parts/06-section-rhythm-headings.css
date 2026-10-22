@@ -1,0 +1,35 @@
+/* --------------------------------------------------------------------------
+   6. Section rhythm & headings
+   -------------------------------------------------------------------------- */
+section{position:relative}
+.pad{padding:96px 0}
+.pad-sm{padding:70px 0}
+.pad-top{padding-top:170px}
+.sec-head{max-width:720px}
+.sec-head h2{font-size:clamp(2rem,4vw,3.1rem);margin-top:18px;color:var(--ink)}
+.sec-head h3{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-top:16px;color:var(--ink)}
+.sec-head p{margin-top:18px;color:var(--muted);font-size:1.05rem;max-width:60ch}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+
+/* inner-page hero ---------------------------------------------------------- */
+.page-hero{position:relative;padding:170px 0 56px;overflow:hidden}
+.page-hero .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;pointer-events:none}
+.page-hero .b1{width:460px;height:460px;background:#BFE7DE;top:-190px;right:-120px}
+.page-hero .b2{width:360px;height:360px;background:#FCE3B8;bottom:-200px;left:-140px;opacity:.5}
+.page-hero .p-grid{
+  position:absolute;inset:0;opacity:.45;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 20%,#000 20%,transparent 75%);
+  mask-image:radial-gradient(ellipse 80% 70% at 60% 20%,#000 20%,transparent 75%);
+}
+.page-hero .inner{position:relative;z-index:2;max-width:860px}
+.page-hero h1{font-size:clamp(2.3rem,4.8vw,3.9rem);margin-top:20px;color:var(--ink)}
+.page-hero p.lead{margin-top:20px;font-size:clamp(1.02rem,1.5vw,1.16rem);color:var(--muted);max-width:62ch}
+.crumbs{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--muted);margin-bottom:6px}
+.crumbs a{color:var(--muted);transition:color .2s}
+.crumbs a:hover{color:var(--teal-2)}
+.crumbs span{opacity:.5}
+

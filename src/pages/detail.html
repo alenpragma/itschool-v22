@@ -1,0 +1,38 @@
+<!-- ==========================================================================
+     pages/detail.html — THE DETAIL TEMPLATE (one file serves all three families)
+     --------------------------------------------------------------------------
+     This is the source for every single-item page: blog posts, notices and
+     events. build.js renders it once per item in data/{blog,notices,events}.json
+     through the shared detail renderers, and writes:
+
+         blog/<slug>.html      <- a real, crawlable file per blog post
+         notice/<slug>.html    <- a real file per notice
+         event/<slug>.html     <- a real file per event
+
+     The WHOLE page is produced by renderers.js → renderDetail(), so there is
+     no HTML to maintain per item and no per-type template to drift. Sections
+     emitted, in order:
+
+         page-hero           crumbs · category/priority · title · excerpt ·
+                             type-specific meta (byline / facts)
+         cover figure        optional hero image (blog, event)
+         article-toolbar     back-to-listing link + date
+         article-wrap        .article-main (prose + agenda + share)  |
+                             .article-side (at-a-glance, tags, CTA)
+         pager               previous / next in the same family
+         related             up to 3 more items + back-to-listing CTA
+
+     ADDING A FIELD to the body copy means adding a block type to
+     renderers.js → detailBody(). No change is needed here.
+
+     Tokens filled by build.js:
+       DETAIL_CONTENT  the fully rendered article HTML for this one item
+
+     NOTE: build-time tokens are NEVER written with their braces inside this
+     comment. apply() substitutes globally, comments included, so a token
+     repeated here would inject the whole article a second time — which is
+     exactly the bug that put two top-level headings on every detail page
+     until v20. scripts/check.js now fails the build if any src/ template
+     spells out a markup-bearing token inside an HTML comment.
+     ========================================================================== -->
+{{DETAIL_CONTENT}}

@@ -1,0 +1,117 @@
+<!-- pages/admission.html — ADMISSION -->
+<section class="page-hero">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="p-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="inner">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Admission</span></nav>
+      <span class="eyebrow">Begin your Edulife story</span>
+      <h1 class="display">Give your child a stronger start.</h1>
+      <p class="lead">Admissions are open for the new academic session. Tell us a little about your family and our team will be in touch — typically within one working day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="admission-grid">
+      <div>
+        <div class="sec-head reveal">
+          <span class="eyebrow">Five clear steps</span>
+          <h2 class="display">How admission works.</h2>
+          <p>No hidden stages, no pressure. Each step exists to make sure the school and the family are a good fit for each other.</p>
+        </div>
+        <div class="steps">
+        {{BLOCK_STEPS}}
+        </div>
+      </div>
+
+      <div class="form-card reveal d2">
+        <h3>Admission inquiry</h3>
+        <p class="sub">{{CONTACT_REPLY_TIME}}</p>
+        <form data-validate novalidate>
+          <div class="form-grid">
+            <div class="field"><label for="studentName">Student name</label><input id="studentName" name="studentName" type="text" placeholder="Full name" required /></div>
+            <div class="field"><label for="parentName">Parent name</label><input id="parentName" name="parentName" type="text" placeholder="Full name" required /></div>
+            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+880 1XXX XXXXXX" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" /></div>
+            <div class="field"><label for="classLevel">Class</label>
+              <select id="classLevel" name="classLevel">
+                <option value="">Select a class</option>
+                <option>Nursery</option><option>Junior One</option><option>Class One</option><option>Class Two</option><option>Class Three</option><option>Class Four</option><option>Class Five</option>
+              </select>
+            </div>
+            <div class="field"><label for="campus">Preferred campus</label>
+              <select id="campus" name="campus">
+                <option value="">Select a campus</option>
+                <option>Khagrachari Campus</option><option>Luxmichari Campus</option>
+              </select>
+            </div>
+            <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about your child and what you are looking for."></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit admission inquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </button>
+          <p class="form-note">This demo form validates in your browser and stores nothing.</p>
+          <div class="form-success">Thank you — your inquiry has been noted. Our team will be in touch within one working day.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What you will need -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Before you apply</span>
+      <h2 class="display">What to have ready.</h2>
+      <p>A short list keeps the process quick once we start talking.</p>
+    </div>
+    <div class="features">
+      <article class="feature reveal d1"><span class="idx">01</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3>Birth certificate</h3><p>A copy for age verification at the point of assessment.</p></article>
+      <article class="feature reveal d2"><span class="idx">02</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><h3>Previous school records</h3><p>Optional, but helpful where a child is transferring from another school.</p></article>
+      <article class="feature reveal d3"><span class="idx">03</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><h3>A reachable phone number</h3><p>So our team can confirm your visit and answer questions quickly.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Classes we offer
+     --------------------------------------------------------------------------
+     The seven classes the school admits into, rendered from
+     data/site.json → classes.items by classCard(). Add or edit a class there
+     and it appears here after a rebuild — no markup changes needed.
+     ========================================================================== -->
+<section class="pad-sm classes-sec">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">{{CLASSES_EYEBROW}}</span>
+        <h2 class="display">{{CLASSES_TITLE}}</h2>
+        <p>{{CLASSES_TEXT}}</p>
+      </div>
+      <span class="eyebrow reveal d2" style="background:var(--teal-soft);padding:10px 18px;border-radius:999px">{{CLASSES_BADGE}}</span>
+    </div>
+    <div class="classes" data-source="site" data-pick="classes.items" data-view="classes">
+        {{BLOCK_CLASSES}}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Common questions</span>
+      <h2 class="display">Families usually ask.</h2>
+    </div>
+    <div class="features" style="grid-template-columns:1fr 1fr">
+      <article class="feature reveal d1"><h3>Which classes do you admit?</h3><p>We admit from Nursery through Class Five across both campuses — see the full list above.</p></article>
+      <article class="feature reveal d2"><h3>Do children need prior computer experience?</h3><p>No. Technology is introduced gradually and age-appropriately from the earliest years.</p></article>
+      <article class="feature reveal d3"><h3>Is there an entrance test?</h3><p>There is a gentle, age-appropriate assessment — not an exam — so we understand where your child is.</p></article>
+      <article class="feature reveal d4"><h3>Can we visit before applying?</h3><p>Yes, and we encourage it. <a href="contact.html" style="color:var(--teal-2);font-weight:700">Book a campus visit</a>.</p></article>
+    </div>
+  </div>
+</section>
+

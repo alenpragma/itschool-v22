@@ -1,0 +1,62 @@
+/* --------------------------------------------------------------------------
+   26. Classes we offer  (Admission page)
+   --------------------------------------------------------------------------
+   Seven class cards, one per level from Nursery to Class Five. The grid is
+   explicit (4 → 2 → 1) rather than auto-fit, so the seven cards always break
+   into tidy rows instead of leaving a single orphan on a wide screen.
+
+   Each card carries a large Fraunces level mark tinted by `tone`, which makes
+   the set read as a progression through the school rather than seven
+   interchangeable tiles. The age chip holds the detail a parent scans for
+   first; the focus line says what the year is actually for.
+   -------------------------------------------------------------------------- */
+.classes-sec{padding-top:20px}
+.classes{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;
+}
+.class-card{
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:14px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px 28px;min-height:212px;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s;
+}
+.class-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+/* A hairline tone accent along the top edge — enough to group the cards by
+   colour without turning them into seven loud tiles. */
+.class-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--teal);opacity:.85;
+}
+.class-card.tone-amber::before{background:var(--amber)}
+.class-card.tone-coral::before{background:var(--coral)}
+.cc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cc-mark{
+  width:56px;height:56px;flex:0 0 auto;border-radius:16px;display:grid;place-items:center;
+  font-family:'Fraunces',serif;font-weight:700;font-size:1.5rem;letter-spacing:-.01em;
+  background:var(--teal-soft);color:var(--teal-2);
+}
+.class-card.tone-amber .cc-mark{background:var(--amber-soft);color:#8A5A00}
+.class-card.tone-coral .cc-mark{background:var(--coral-soft);color:var(--coral)}
+.cc-age{
+  font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 11px;
+  white-space:nowrap;
+}
+/* Pushed to the bottom of the card so every card's text block starts on the
+   same line regardless of how long the focus sentence runs. */
+.cc-name{font-size:1.12rem;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin-top:auto}
+.cc-focus{font-size:.88rem;color:var(--muted);line-height:1.6}
+
+/* --- responsive: classes -------------------------------------------------- */
+@media(max-width:1024px){
+  .classes{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  /* One column: at 375px two columns would squeeze the mark and the age chip
+     onto the same row with no room to spare. */
+  .classes{grid-template-columns:1fr;gap:14px;margin-top:34px}
+  .class-card{min-height:0;padding:22px 20px 24px}
+  .cc-mark{width:50px;height:50px;font-size:1.35rem;border-radius:14px}
+}
+

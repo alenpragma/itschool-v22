@@ -1,0 +1,30 @@
+<!-- ==========================================================================
+     components/footer.html — site footer (shared by every page)
+     --------------------------------------------------------------------------
+     Tokens filled by build.js, all sourced from data/site.json:
+       {{FOOTER_COLUMNS}}  the three link columns
+       {{FOOTER_NOTE}}     copyright line
+       {{FOOTER_STRAP}}    strap-line under the copyright
+     ========================================================================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <!-- Footer sits on navy, so it uses the cream-ink lockup variant:
+             the standard full-colour logo's royal blue would sink into the
+             navy without enough contrast. Same 300x100 intrinsic size. -->
+        <div class="brand">
+          <img class="brand-logo" src="assets/images/logo-full-light.png"
+               alt="Edulife IT School — Education for Life"
+               width="300" height="100" decoding="async" />
+        </div>
+        <p>{{FOOTER_DESCRIPTION}}</p>
+      </div>
+      {{FOOTER_COLUMNS}}
+    </div>
+    <div class="foot-bottom">
+      <span>{{FOOTER_NOTE}}</span>
+      <span>{{FOOTER_STRAP}}</span>
+    </div>
+  </div>
+</footer>

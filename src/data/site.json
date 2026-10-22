@@ -1,0 +1,499 @@
+{
+  "$comment": "Global site data: brand, navigation, contact, campuses, footer and shared CTA. Consumed by build.js (build time) and data-loader.js (runtime). Swap for GET /site when a backend is connected.",
+  "brand": {
+    "name": "Edulife",
+    "tagline": "IT School",
+    "initial": "E",
+    "founded": 2015,
+    "description": "An English-focused primary school where Computer, IT, Programming and modern skills become part of everyday learning."
+  },
+  "seo": {
+    "titleSuffix": "Edulife IT School",
+    "defaultDescription": "Edulife IT School is an English-focused primary school integrating Computer, IT, Programming, AI and modern learning skills to prepare students for the future.",
+    "themeColor": "#101B2D"
+  },
+  "contact": {
+    "phone": "+880 1800 000000",
+    "phoneHref": "tel:+8801800000000",
+    "email": "hello@edulife.edu.bd",
+    "emailHref": "mailto:hello@edulife.edu.bd",
+    "hours": "Sunday – Thursday, 8:00 AM – 3:00 PM",
+    "replyTime": "We typically respond within one working day.",
+    "cards": [
+      {
+        "icon": "phone",
+        "title": "Call the school office",
+        "text": "+880 1800 000000",
+        "href": "tel:+8801800000000"
+      },
+      {
+        "icon": "mail",
+        "title": "Email us",
+        "text": "hello@edulife.edu.bd",
+        "href": "mailto:hello@edulife.edu.bd"
+      },
+      {
+        "icon": "clock",
+        "title": "Office hours",
+        "text": "Sunday – Thursday, 8:00 AM – 3:00 PM"
+      },
+      {
+        "icon": "pin",
+        "title": "Visit a campus",
+        "text": "Khagrachari & Luxmichari — see both addresses below"
+      }
+    ]
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "index.html",
+      "key": "home"
+    },
+    {
+      "label": "About",
+      "href": "about.html",
+      "key": "about"
+    },
+    {
+      "label": "Admission",
+      "href": "admission.html",
+      "key": "admission"
+    },
+    {
+      "label": "Teachers",
+      "href": "teachers.html",
+      "key": "teachers"
+    },
+    {
+      "label": "Notice",
+      "href": "notice.html",
+      "key": "notice"
+    },
+    {
+      "label": "Events",
+      "href": "events.html",
+      "key": "events"
+    },
+    {
+      "label": "Gallery",
+      "href": "gallery.html",
+      "key": "gallery"
+    },
+    {
+      "label": "Blog",
+      "href": "blog.html",
+      "key": "blog"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html",
+      "key": "contact"
+    }
+  ],
+  "primaryCta": {
+    "label": "Apply now",
+    "href": "admission.html"
+  },
+  "social": [
+    {
+      "label": "Facebook",
+      "icon": "facebook",
+      "href": "https://facebook.com/"
+    },
+    {
+      "label": "YouTube",
+      "icon": "youtube",
+      "href": "https://youtube.com/"
+    },
+    {
+      "label": "WhatsApp",
+      "icon": "whatsapp",
+      "href": "https://wa.me/8801800000000"
+    },
+    {
+      "label": "Email",
+      "icon": "mail",
+      "href": "mailto:hello@edulife.edu.bd"
+    }
+  ],
+  "campuses": [
+    {
+      "id": "khagrachari",
+      "name": "Khagrachari Campus",
+      "address": "College Gate, Khagrachari 4400, Chattogram Hill Tracts",
+      "phone": "+880 1800 000001",
+      "email": "khagrachari@edulife.edu.bd"
+    },
+    {
+      "id": "luxmichari",
+      "name": "Luxmichari Campus",
+      "address": "Luxmichari Sadar, Khagrachari 4400, Chattogram Hill Tracts",
+      "phone": "+880 1800 000002",
+      "email": "luxmichari@edulife.edu.bd"
+    }
+  ],
+  "hero": {
+    "$comment": "admissionsBadge is the hero's SECONDARY highlight: a small amber pill above the eyebrow. A signpost, not a headline — the h1 and primaryAction remain the primary message and primary action. The label renders on ONE line down to 340px viewport; below that it wraps to two balanced lines (text-wrap:balance in 07-hero-home.css), so up to ~40 chars is safe. Beyond ~48 chars it would need three lines even at 375px, which breaks the pill shape — shorten it if you go much longer.",
+    "admissionsBadge": {
+      "text": "Admissions open for 2027 · limited seats",
+      "href": "notice/admissions-open-2027-academic-session.html"
+    },
+    "eyebrow": "English focused · IT integrated",
+    "titleLead": "Building",
+    "titleAccent": "confident",
+    "titleTail": "learners for a digital future.",
+    "lead": "An English-focused primary school where Computer, IT, Programming and modern skills become part of everyday learning.",
+    "primaryAction": {
+      "label": "Apply for admission",
+      "href": "admission.html"
+    },
+    "secondaryAction": {
+      "label": "Explore Edulife",
+      "href": "about.html"
+    },
+    "tags": [
+      "English focused",
+      "IT integrated",
+      "Learning without dependence"
+    ],
+    "image": "assets/images/classroom.jpg",
+    "imageAlt": "Students learning together in a bright Edulife classroom",
+    "floatCards": [
+      {
+        "style": "fc-1",
+        "label": "Today we learn",
+        "value": "English + code"
+      },
+      {
+        "style": "fc-2",
+        "label": "Student confidence",
+        "value": "Starts here ↗"
+      },
+      {
+        "style": "fc-3",
+        "label": "Since",
+        "value": "2015"
+      }
+    ]
+  },
+  "pillars": [
+    {
+      "num": "01",
+      "title": "English Focused",
+      "text": "Build confident communication through everyday English, phonetics and public speaking."
+    },
+    {
+      "num": "02",
+      "title": "IT Integrated Curriculum",
+      "text": "Connect classroom learning with coding, technology, creativity and future-ready skills."
+    },
+    {
+      "num": "03",
+      "title": "No Private Tutor",
+      "text": "A focused school day that gives children the support they need to learn independently."
+    }
+  ],
+  "stats": [
+    {
+      "value": "2015",
+      "suffix": "",
+      "label": "Education journey began"
+    },
+    {
+      "value": "2",
+      "suffix": "",
+      "label": "Active campuses"
+    },
+    {
+      "value": "10",
+      "suffix": "+",
+      "label": "Years growing"
+    },
+    {
+      "value": "3",
+      "suffix": "",
+      "label": "Learning pillars"
+    }
+  ],
+  "features": [
+    {
+      "icon": "book",
+      "title": "National + own curriculum",
+      "text": "Children receive the national curriculum plus additional skills designed around real confidence and future readiness."
+    },
+    {
+      "icon": "mic",
+      "title": "Phonetics & public speaking",
+      "text": "Daily practice helps children pronounce clearly, express ideas and speak in front of others with confidence."
+    },
+    {
+      "icon": "monitor",
+      "title": "AI, computers & coding",
+      "text": "Technology is introduced early through age-appropriate computer, coding and responsible AI activities."
+    },
+    {
+      "icon": "check",
+      "title": "Classwork finished in class",
+      "text": "Focused teaching and guided practice help children complete their classwork at school, reducing tutor dependence."
+    },
+    {
+      "icon": "users",
+      "title": "Small, caring guidance",
+      "text": "Teachers know each learner closely and provide the encouragement, feedback and structure they need."
+    },
+    {
+      "icon": "star",
+      "title": "Character with capability",
+      "text": "Curiosity, kindness, responsibility and practical ability grow together in everyday school life."
+    }
+  ],
+  "admissionSteps": [
+    {
+      "step": "1",
+      "title": "Submit application",
+      "text": "A clear, friendly step in your family’s journey."
+    },
+    {
+      "step": "2",
+      "title": "Initial communication",
+      "text": "Our team reaches out to welcome and guide you."
+    },
+    {
+      "step": "3",
+      "title": "Student assessment",
+      "text": "A gentle, age-appropriate look at where your child is."
+    },
+    {
+      "step": "4",
+      "title": "Parent discussion",
+      "text": "We talk through goals, questions and next steps together."
+    },
+    {
+      "step": "5",
+      "title": "Admission confirmation",
+      "text": "Welcome to the Edulife community."
+    }
+  ],
+  "classes": {
+    "$comment": "The seven classes the school admits into, rendered by classCard() into the .classes grid on the Admission page. Add or edit an entry here and it appears after the next build — no markup changes needed. `mark` is the short level numeral shown on the card; `tone` is one of teal / amber / coral.",
+    "eyebrow": "Classes we offer",
+    "title": "Seven classes, one clear path.",
+    "text": "Edulife runs from Nursery through Class Five. Each year builds on the one before it, so a child can grow with us from their very first school day to the end of primary.",
+    "badge": "Nursery to Class Five",
+    "items": [
+      {
+        "id": "nursery",
+        "mark": "N",
+        "name": "Nursery",
+        "age": "Age 3–4",
+        "focus": "First steps into school life — play, phonics and a gentle daily routine.",
+        "tone": "teal"
+      },
+      {
+        "id": "junior-one",
+        "mark": "J1",
+        "name": "Junior One",
+        "age": "Age 4–5",
+        "focus": "A bridge year that builds early reading, writing and number sense.",
+        "tone": "amber"
+      },
+      {
+        "id": "one",
+        "mark": "1",
+        "name": "Class One",
+        "age": "Age 5–6",
+        "focus": "Formal schooling begins: English, maths and first computer skills.",
+        "tone": "coral"
+      },
+      {
+        "id": "two",
+        "mark": "2",
+        "name": "Class Two",
+        "age": "Age 6–7",
+        "focus": "Reading fluency, structured writing and everyday coding play.",
+        "tone": "teal"
+      },
+      {
+        "id": "three",
+        "mark": "3",
+        "name": "Class Three",
+        "age": "Age 7–8",
+        "focus": "Wider subjects, project work and confident public speaking.",
+        "tone": "amber"
+      },
+      {
+        "id": "four",
+        "mark": "4",
+        "name": "Class Four",
+        "age": "Age 8–9",
+        "focus": "Independent study habits, science thinking and digital creativity.",
+        "tone": "coral"
+      },
+      {
+        "id": "five",
+        "mark": "5",
+        "name": "Class Five",
+        "age": "Age 9–10",
+        "focus": "The final primary year — leadership, exam readiness and deeper IT.",
+        "tone": "teal"
+      }
+    ]
+  },
+  "marquee": [
+    "English focused",
+    "IT integrated",
+    "Phonetics & public speaking",
+    "AI, computers & coding",
+    "Learning without dependence"
+  ],
+  "ctaSteps": {
+    "$comment": "The closing admission section on the homepage: the five-step journey on the left, the admission inquiry form on the right. Edit copy here only. NOTE the five STEPS are deliberately NOT stored here — they come from the shared `admissionSteps` array above, which /admission renders too, so the two pages can never describe a different process. The form's class dropdown is generated from `classes.items`, so adding a class updates the grid and the form together.",
+    "eyebrow": "Five clear steps",
+    "title": "How admission works.",
+    "text": "No hidden stages, no pressure. Read the five steps, then send your inquiry without leaving this page — every step exists to make sure the school and the family are a good fit for each other.",
+    "formTitle": "Admission inquiry",
+    "submit": "Submit admission inquiry",
+    "note": "This demo form validates in your browser and stores nothing.",
+    "success": "Thank you — your inquiry has been noted. Our team will be in touch within one working day."
+  },
+  "initiatives": {
+    "$comment": "The Edulife family of initiatives. Rendered by initiativeCard() into the .initiatives grid on the homepage. Add or edit an entry here and it appears after the next build - no markup changes needed.\n  logo  -> a PNG/JPG in src/assets/images/initiatives/ (square, transparent, ~192px). REPLACE THESE with the real brand logos; the shipped files are placeholder marks drawn to match the site palette.\n  alt   -> the image's alt text. The initiative name is also rendered as text, so keep this descriptive but short.\n  url   -> the initiative's OWN website. THESE ARE PLACEHOLDERS (example.com) - replace all six. Set url to \"\" to fall back to href, an in-site page.\n  icon  -> optional SVG fallback used when logo is blank or its file is missing, from the icon set in assets/js/renderers.js (cap, pen, balloon, pages, apple, chip).\n  href  -> in-site page used when url is empty.",
+    "eyebrow": "The Edulife family",
+    "title": "More than a school.",
+    "text": "Edulife began as one school. Today the same belief — education for life — reaches further through a family of purposeful initiatives.",
+    "items": [
+      {
+        "id": "edulife-it",
+        "icon": "cap",
+        "logo": "assets/images/initiatives/edulife-it.png",
+        "alt": "Edulife IT logo",
+        "name": "Edulife IT",
+        "tagline": "The school itself — English-focused, IT-integrated primary education.",
+        "url": "https://example.com/edulife-it",
+        "href": "index.html",
+        "tone": "teal"
+      },
+      {
+        "id": "edulife-agency",
+        "icon": "pen",
+        "logo": "assets/images/initiatives/edulife-agency.png",
+        "alt": "Edulife Agency logo",
+        "name": "Edulife Agency",
+        "tagline": "Branding, design and digital growth for schools and small teams.",
+        "url": "https://example.com/edulife-agency",
+        "href": "contact.html",
+        "tone": "amber"
+      },
+      {
+        "id": "edulife-kids",
+        "icon": "balloon",
+        "logo": "assets/images/initiatives/edulife-kids.png",
+        "alt": "Edulife Kids logo",
+        "name": "Edulife Kids",
+        "tagline": "Playful early-years programmes that build confident young learners.",
+        "url": "https://example.com/edulife-kids",
+        "href": "admission.html",
+        "tone": "coral"
+      },
+      {
+        "id": "edulife-publications",
+        "icon": "pages",
+        "logo": "assets/images/initiatives/edulife-publications.png",
+        "alt": "Edulife Publications logo",
+        "name": "Edulife Publications",
+        "tagline": "Workbooks, phonetics material and learning resources for families.",
+        "url": "https://example.com/edulife-publications",
+        "href": "blog.html",
+        "tone": "teal"
+      },
+      {
+        "id": "foodlife",
+        "icon": "apple",
+        "logo": "assets/images/initiatives/foodlife.png",
+        "alt": "FoodLife logo",
+        "name": "FoodLife",
+        "tagline": "Wholesome school meals and everyday nutrition for growing children.",
+        "url": "https://example.com/foodlife",
+        "href": "contact.html",
+        "tone": "amber"
+      },
+      {
+        "id": "edulife-tech",
+        "icon": "chip",
+        "logo": "assets/images/initiatives/edulife-tech.png",
+        "alt": "Edulife Tech logo",
+        "name": "Edulife Tech",
+        "tagline": "Coding labs, robotics kits and teacher training for the digital age.",
+        "url": "https://example.com/edulife-tech",
+        "href": "gallery.html",
+        "tone": "coral"
+      }
+    ]
+  },
+  "footer": {
+    "note": "© 2026 Edulife IT School. All rights reserved.",
+    "strap": "English focused · IT integrated · Learning without dependence",
+    "columns": [
+      {
+        "title": "Explore",
+        "links": [
+          {
+            "label": "About",
+            "href": "about.html"
+          },
+          {
+            "label": "Life at Edulife",
+            "href": "gallery.html"
+          },
+          {
+            "label": "Teachers",
+            "href": "teachers.html"
+          },
+          {
+            "label": "Blog",
+            "href": "blog.html"
+          }
+        ]
+      },
+      {
+        "title": "Families",
+        "links": [
+          {
+            "label": "Notice Board",
+            "href": "notice.html"
+          },
+          {
+            "label": "Events",
+            "href": "events.html"
+          },
+          {
+            "label": "Admission",
+            "href": "admission.html"
+          },
+          {
+            "label": "Book a visit",
+            "href": "contact.html"
+          }
+        ]
+      },
+      {
+        "title": "Campuses",
+        "links": [
+          {
+            "label": "Khagrachari Campus",
+            "href": "contact.html"
+          },
+          {
+            "label": "Luxmichari Campus",
+            "href": "contact.html"
+          },
+          {
+            "label": "Contact us",
+            "href": "contact.html"
+          }
+        ]
+      }
+    ]
+  }
+}

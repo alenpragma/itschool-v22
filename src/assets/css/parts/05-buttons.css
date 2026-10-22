@@ -1,0 +1,20 @@
+/* --------------------------------------------------------------------------
+   5. Buttons
+   -------------------------------------------------------------------------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;
+  padding:15px 26px;border-radius:999px;transition:transform .25s var(--ease),box-shadow .25s,background .25s,color .25s;
+  will-change:transform;
+}
+.btn svg{width:17px;height:17px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translate(3px,-3px)}
+.btn-primary{background:var(--ink);color:var(--cream);box-shadow:var(--shadow-md)}
+.btn-primary:hover{transform:translateY(-3px);background:var(--teal-2)}
+.btn-amber{background:var(--amber);color:var(--ink);box-shadow:0 18px 40px -22px rgba(245,165,36,.9)}
+.btn-amber:hover{transform:translateY(-3px);background:#ffb63d}
+.btn-ghost{border:1.5px solid var(--line-2);color:var(--ink);background:transparent}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--ink);background:var(--paper)}
+.btn-light{background:var(--paper);color:var(--ink);box-shadow:var(--shadow-md)}
+.btn-light:hover{transform:translateY(-3px)}
+.btn-sm{padding:11px 20px;font-size:13.5px}
+

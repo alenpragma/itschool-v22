@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace the relative <loc> values with absolute URLs on deploy. -->
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  <url><loc>index.html</loc></url>
+  <url><loc>about.html</loc></url>
+  <url><loc>admission.html</loc></url>
+  <url><loc>teachers.html</loc></url>
+  <url><loc>notice.html</loc></url>
+  <url><loc>events.html</loc></url>
+  <url><loc>gallery.html</loc></url>
+  <url><loc>blog.html</loc></url>
+  <url><loc>contact.html</loc></url>
+  <url><loc>blog/how-to-build-a-confident-reader-at-home.html</loc></url>
+  <url><loc>blog/why-digital-literacy-belongs-in-primary-school.html</loc></url>
+  <url><loc>blog/a-day-inside-the-edulife-innovation-lab.html</loc></url>
+  <url><loc>blog/why-questions-are-the-beginning-of-learning.html</loc></url>
+  <url><loc>blog/creating-a-calm-homework-routine.html</loc></url>
+  <url><loc>blog/speaking-up-phonetics-in-everyday-practice.html</loc></url>
+  <url><loc>blog/what-we-learned-from-our-first-coding-showcase.html</loc></url>
+  <url><loc>blog/building-a-school-community-that-lasts.html</loc></url>
+  <url><loc>notice/admissions-open-2027-academic-session.html</loc></url>
+  <url><loc>notice/mid-term-assessment-schedule-published.html</loc></url>
+  <url><loc>notice/parent-orientation-morning.html</loc></url>
+  <url><loc>notice/winter-uniform-guidelines-released.html</loc></url>
+  <url><loc>notice/innovation-lab-extended-opening-hours.html</loc></url>
+  <url><loc>notice/annual-health-and-hygiene-check-completed.html</loc></url>
+  <url><loc>event/edulife-student-carnival.html</loc></url>
+  <url><loc>event/young-speakers-showcase.html</loc></url>
+  <url><loc>event/coding-day.html</loc></url>
+  <url><loc>event/science-discovery-fair.html</loc></url>
+  <url><loc>event/winter-concert-and-art-exhibition.html</loc></url>
+  <url><loc>event/parents-progress-meeting.html</loc></url>
+</urlset>

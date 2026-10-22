@@ -1,0 +1,89 @@
+{
+  "$comment": "Life at Edulife gallery. GET /gallery -> { items: [...] }. `size` controls the mosaic span: '' | 'big' | 'wide'.",
+  "items": [
+    {
+      "title": "Learning together",
+      "category": "Classroom",
+      "image": "assets/images/u-classroom.jpg",
+      "alt": "Students learning together in a bright classroom",
+      "size": "big"
+    },
+    {
+      "title": "Growing together",
+      "category": "Playtime",
+      "image": "assets/images/u-collab.jpg",
+      "alt": "Students collaborating around a table",
+      "size": ""
+    },
+    {
+      "title": "Building ideas",
+      "category": "Coding Lab",
+      "image": "assets/images/u-coding.jpg",
+      "alt": "Student exploring technology on a laptop",
+      "size": ""
+    },
+    {
+      "title": "Finding a voice",
+      "category": "Public Speaking",
+      "image": "assets/images/u-speaking.jpg",
+      "alt": "Student speaking confidently in class",
+      "size": "wide"
+    },
+    {
+      "title": "Curious minds",
+      "category": "Reading",
+      "image": "assets/images/u-reading.jpg",
+      "alt": "Children reading and discovering together",
+      "size": "wide"
+    },
+    {
+      "title": "Hands-on digital skills",
+      "category": "Technology",
+      "image": "assets/images/u-digital.jpg",
+      "alt": "Students practising digital skills on computers",
+      "size": ""
+    },
+    {
+      "title": "Experiments and discovery",
+      "category": "Science",
+      "image": "assets/images/u-lab.jpg",
+      "alt": "Children exploring an experiment in the science lab",
+      "size": ""
+    },
+    {
+      "title": "Working as a team",
+      "category": "Collaboration",
+      "image": "assets/images/u-homework.jpg",
+      "alt": "Students working through classwork together",
+      "size": ""
+    },
+    {
+      "title": "Celebrating milestones",
+      "category": "School life",
+      "image": "assets/images/u-carnival.jpg",
+      "alt": "Students celebrating a school milestone",
+      "size": "wide"
+    },
+    {
+      "title": "Showcasing our work",
+      "category": "Showcase",
+      "image": "assets/images/u-showcase.jpg",
+      "alt": "Students presenting their projects at a showcase",
+      "size": ""
+    },
+    {
+      "title": "Carnival day",
+      "category": "Events",
+      "image": "assets/images/u-carnival.jpg",
+      "alt": "Children enjoying the annual school carnival",
+      "size": ""
+    },
+    {
+      "title": "A bright place to learn",
+      "category": "Campus",
+      "image": "assets/images/classroom.jpg",
+      "alt": "Edulife classroom interior",
+      "size": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!-- ==========================================================================
+     pages/article.html — THE RUNTIME ROUTE  (?type=&slug=)
+     --------------------------------------------------------------------------
+     The single URL that serves any item by query parameter:
+
+         article.html?type=blog&slug=<slug>
+         article.html?type=notice&slug=<slug>
+         article.html?type=event&slug=<slug>
+
+     assets/js/article.js reads the parameters, loads that family from the data
+     layer, finds the item whose slug matches, and renders it with the SAME
+     detail renderers the static build uses — so this page and the generated
+     blog/<slug>.html are identical in output.
+
+     host rewrite once you go dynamic:
+         /blog/:slug    ->  article.html?type=blog&slug=:slug
+         /notice/:slug  ->  article.html?type=notice&slug=:slug
+         /event/:slug   ->  article.html?type=event&slug=:slug
+
+     Everything inside #articleMount is REPLACED by article.js. The markup below
+     is therefore a genuine no-JS / failed-fetch fallback, not decoration: it
+     offers real links onward rather than a blank screen.
+     ========================================================================== -->
+<div id="articleMount">
+  <section class="page-hero">
+    <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+    <div class="p-grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="inner">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Article</span></nav>
+        <span class="eyebrow">One moment</span>
+        <h1 class="display">Opening this page&hellip;</h1>
+        <p class="lead">Content is read from the site&rsquo;s data layer. If this message stays on screen, JavaScript is unavailable or the data source could not be reached &mdash; the links below will still take you where you need to go.</p>
+        <div class="hero-actions" style="margin-top:30px">
+          <a href="blog.html" class="btn btn-primary">The Edulife Journal
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+          <a href="notice.html" class="btn btn-ghost">Notice Board
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <a href="events.html" class="btn btn-ghost">Events
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

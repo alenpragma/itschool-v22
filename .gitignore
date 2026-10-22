@@ -1,0 +1,88 @@
+# --- Dependencies -----------------------------------------------------------
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# --- Build output -----------------------------------------------------------
+# `npm run build` assembles the whole publishable site into dist/.
+# dist/ is a BUILD ARTIFACT: it is regenerated from src/ + public/ on every
+# build and must never be committed or hand-edited.
+dist/
+
+# --- Local checks / QA scratch output ---------------------------------------
+# Local screenshot dumps, verification runs and scratch tooling.
+*check/
+qc/
+qa_v*/
+shots/
+_shots/
+*.local.html
+
+# --- Logs -------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment / secrets --------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# --- OS files ---------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Editor / IDE folders ---------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# --- Hosting platform local state -------------------------------------------
+.vercel/
+.netlify/
+.cache/
+
+# ---- build output (v2.0.0) ------------------------------------------------
+# dist/ is the only build product. src/ is the only source of truth.
+dist/
+.build/
+
+# optional root mirror, only if you ran scripts/publish.js
+# (kept out of git so live can never drift from src/)
+/index.html
+/about.html
+/admission.html
+/teachers.html
+/notice.html
+/events.html
+/gallery.html
+/blog.html
+/contact.html
+/404.html
+/article.html
+/sitemap.xml
+/robots.txt
+/assets/
+/blog/
+/notice/
+/event/
+/data/
+
+# generated image variants + manifest
+src/assets/images/opt/

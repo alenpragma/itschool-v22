@@ -1,0 +1,42 @@
+/* --------------------------------------------------------------------------
+   4. Header / navigation
+   -------------------------------------------------------------------------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  transition:background .35s var(--ease),box-shadow .35s var(--ease),padding .35s var(--ease);
+  padding:18px 0;
+}
+header.scrolled{
+  background:rgba(251,247,240,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line),0 12px 30px -24px rgba(16,27,45,.5);
+  padding:10px 0;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+/* The brand is now the FULL horizontal lockup (emblem + wordmark) as a single
+   300x100 PNG, so there is no separate mark holder and no adjacent text: the
+   wordmark is inside the artwork. Sizing is driven by HEIGHT with width:auto,
+   which keeps the native 3:1 ratio without any per-instance maths; the
+   width/height attributes on the <img> still reserve the box before load. */
+.brand{display:flex;align-items:center;min-width:0;font-weight:800;letter-spacing:-.02em}
+.brand-logo{
+  display:block;height:48px;width:auto;max-width:100%;
+  object-fit:contain;object-position:left center;
+}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{
+  font-size:13.5px;font-weight:600;color:var(--ink-3);padding:9px 12px;border-radius:999px;
+  transition:color .2s,background .2s;position:relative;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--ink);background:rgba(16,27,45,.05)}
+.nav-links a.active{color:var(--teal-2);background:var(--teal-soft)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--cream);
+  padding:11px 20px;border-radius:999px;font-size:14px;font-weight:700;white-space:nowrap;
+  transition:transform .25s var(--ease),background .25s,box-shadow .25s;box-shadow:var(--shadow-sm);
+}
+.nav-cta:hover{transform:translateY(-2px);background:var(--teal-2);box-shadow:var(--shadow-md)}
+.nav-cta svg{width:15px;height:15px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;background:var(--ink);color:var(--cream);place-items:center}
+.burger svg{width:20px;height:20px}
+

@@ -1,0 +1,28 @@
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
+:root{
+  --ink:#101B2D;
+  --ink-2:#1B2A44;
+  --ink-3:#2C3E5C;
+  --cream:#FBF7F0;
+  --paper:#FFFFFF;
+  --teal:#0E7C6B;
+  --teal-2:#0A5F52;
+  --teal-soft:#E1F2EE;
+  --amber:#F5A524;
+  --amber-soft:#FDF0D8;
+  --coral:#E4572E;
+  --coral-soft:#FCE7DF;
+  --muted:#5C6B80;
+  --line:#E8E1D5;
+  --line-2:#D9D0C0;
+  --radius:22px;
+  --radius-lg:34px;
+  --shadow-sm:0 1px 2px rgba(16,27,45,.06),0 6px 18px -8px rgba(16,27,45,.14);
+  --shadow-md:0 18px 40px -22px rgba(16,27,45,.35);
+  --shadow-lg:0 40px 80px -40px rgba(16,27,45,.45);
+  --maxw:1200px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+

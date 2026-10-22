@@ -1,0 +1,97 @@
+name: CI
+
+# Runs on every pull request AND on pushes to the default branch, so a broken
+# build is caught BEFORE it lands rather than after. The deploy workflow is
+# deliberately separate (deploy-pages.yml): this one only verifies.
+#
+# What it proves, in the order a reviewer would care about it:
+#   1. lint          — the code is not obviously wrong
+#   2. format        — the diff is not noise (Prettier owns formatting)
+#   3. build         — every page assembles from src/
+#   4. check         — the quality gate (tag balance, links, CSS, CSS bundle)
+#   5. test          — unit + contract tests on the real source
+#   6. serve         — every generated page really answers on a server
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Lint, build, gate and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      fail-fast: true
+      matrix:
+        node-version: ['20']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (ESLint)
+        run: npm run lint
+
+      - name: Format check (Prettier)
+        run: npm run format:check
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Quality gate
+        run: npm run check
+
+      - name: Tests (unit + contract)
+        run: npm test
+
+      - name: Every generated page answers on a server
+        run: |
+          node scripts/serve.js --port 4173 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          # Wait for the server, but fail loudly rather than hanging if it never
+          # comes up — a silent 30s sleep is how CI turns into a coin toss.
+          for i in $(seq 1 40); do
+            if curl -fsS -o /dev/null http://127.0.0.1:4173/index.html; then break; fi
+            sleep 0.25
+          done
+          FAIL=0
+          for page in $(find dist -name '*.html' | sort); do
+            url="http://127.0.0.1:4173/${page#dist/}"
+            code=$(curl -s -o /dev/null -w '%{http_code}' "$url")
+            if [ "$code" != "200" ]; then
+              echo "FAIL $code $url"
+              FAIL=1
+            fi
+          done
+          count=$(find dist -name '*.html' | wc -l)
+          echo "Checked $count pages."
+          exit $FAIL
+
+      - name: Upload the built site as an artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+          retention-days: 7

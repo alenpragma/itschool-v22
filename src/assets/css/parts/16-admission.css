@@ -1,0 +1,42 @@
+/* --------------------------------------------------------------------------
+   16. Admission
+   -------------------------------------------------------------------------- */
+.admission-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.steps{display:flex;flex-direction:column;gap:0;margin-top:40px}
+.step{display:flex;gap:22px;padding-bottom:30px;position:relative}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:23px;top:48px;bottom:0;width:2px;background:var(--line)}
+.step:last-child::before{display:none}
+.step .dot{
+  width:48px;height:48px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:var(--paper);border:2px solid var(--line);font-family:'Fraunces',serif;font-weight:700;color:var(--teal-2);
+  transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease);z-index:1;
+}
+.step:hover .dot{background:var(--teal);color:#fff;border-color:var(--teal);transform:scale(1.08)}
+.step h3{font-size:1.1rem;font-weight:800;padding-top:10px}
+.step p{font-size:.9rem;color:var(--muted);margin-top:6px}
+
+.form-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow-md)}
+.form-card h3{font-size:1.5rem;font-weight:800}
+.form-card .sub{font-size:.9rem;color:var(--muted);margin-top:8px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.field input,.field select,.field textarea{
+  font-family:inherit;font-size:14.5px;color:var(--ink);background:var(--cream);
+  border:1.5px solid var(--line);border-radius:13px;padding:13px 15px;transition:border-color .25s,background .25s,box-shadow .25s;
+}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px rgba(14,124,107,.12);
+}
+.form-card .btn{width:100%;justify-content:center;margin-top:24px}
+.form-note{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+.form-success{
+  display:none;margin-top:20px;background:var(--teal-soft);border:1px solid var(--teal);color:var(--teal-2);
+  padding:16px 18px;border-radius:14px;font-size:14px;font-weight:700;
+}
+.form-success.show{display:block;animation:pop .4s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+

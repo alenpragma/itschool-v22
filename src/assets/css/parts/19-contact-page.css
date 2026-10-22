@@ -1,0 +1,23 @@
+/* --------------------------------------------------------------------------
+   19. Contact page
+   -------------------------------------------------------------------------- */
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;margin-top:52px}
+.info-list{display:flex;flex-direction:column;gap:16px;margin-top:34px}
+.info-card{display:flex;gap:20px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;
+  transition:transform .35s var(--ease),box-shadow .35s}
+.info-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.info-card .ic{width:50px;height:50px;border-radius:14px;background:var(--teal-soft);color:var(--teal-2);display:grid;place-items:center;flex:none}
+.info-card .ic svg{width:22px;height:22px}
+.info-card h3{font-size:1.02rem;font-weight:800}
+.info-card p{font-size:.92rem;color:var(--muted);margin-top:6px}
+.info-card a{color:var(--teal-2);font-weight:700}
+.campus-card{background:var(--ink);color:var(--cream);border-radius:var(--radius-lg);padding:38px;position:relative;overflow:hidden}
+.campus-card::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(14,124,107,.5),transparent 70%);top:-140px;right:-90px}
+.campus-card h3{font-size:1.5rem;font-weight:800;margin-top:14px;position:relative}
+.campus-card p{color:rgba(251,247,240,.78);font-size:.95rem;margin-top:12px;position:relative}
+.campus-card .lines{margin-top:26px;display:flex;flex-direction:column;gap:14px;position:relative}
+.campus-card .lines div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:12px;font-size:.92rem}
+.campus-card .lines div:last-child{border-bottom:none}
+.campus-card .lines span:first-child{color:#8FD8C9;font-weight:700}
+

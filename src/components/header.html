@@ -1,0 +1,32 @@
+<!-- ==========================================================================
+     components/header.html — sticky site header (shared by every page)
+     --------------------------------------------------------------------------
+     Tokens filled by build.js:
+       {{NAV_LINKS}}  anchor markup, one per entry in data/site.json > nav,
+                      with class="active" applied to the current page
+       {{CTA_LABEL}} · {{CTA_HREF}}  from data/site.json > primaryCta
+     ========================================================================== -->
+<header id="header">
+  <div class="wrap nav">
+    <!-- Full horizontal lockup (emblem + wordmark) instead of the bare seal:
+         the wordmark is part of the artwork, so the adjacent text spans are gone.
+         Intrinsic 300x100 is declared for aspect ratio; CSS scales it down. -->
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="assets/images/logo-full.png"
+           alt="Edulife IT School — Education for Life"
+           width="300" height="100" decoding="async" />
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+      {{NAV_LINKS}}
+    </nav>
+
+    <a href="{{CTA_HREF}}" class="nav-cta">{{CTA_LABEL}}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>

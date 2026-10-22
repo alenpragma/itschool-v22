@@ -1,0 +1,146 @@
+/* --------------------------------------------------------------------------
+   25. Closing admission section + initiatives  (homepage)
+   --------------------------------------------------------------------------
+   The homepage's final section pairs the five admission STEPS with the
+   admission inquiry FORM, so a guardian can read the process and send an
+   inquiry without leaving the page.
+
+   The two columns MUST end on the same line. `.cta-cols` is a plain CSS grid
+   with `align-items:stretch` (the grid default, stated here on purpose so
+   nobody "optimises" it away) plus `height:100%` on each column, so both
+   columns are sized by the TALLER one and the shorter one simply fills the
+   extra space. Because the form is much taller than the step list, the LEFT
+   column is the short one and its panel stretches down to the form's bottom
+   edge. This holds at every viewport with no fixed height and no JS
+   measurement. Below 860px the grid collapses to one column and equal height
+   stops applying on purpose — once the columns are stacked there is nothing
+   left to align, and forcing a shared height would only create dead space.
+
+   The step and form markup reuses .step / .form-card / .field from section 16
+   (the Admission page) rather than restating them: the SAME classes mean the
+   homepage section and the Admission page cannot drift apart visually.
+   -------------------------------------------------------------------------- */
+.cta-sec{padding:70px 0 92px}
+
+/* The equal-height mechanism. `grid` + `stretch` keeps both columns flush. */
+.cta-cols{
+  display:grid;grid-template-columns:1.02fr .98fr;
+  gap:clamp(28px,4vw,56px);
+  align-items:stretch;              /* <- equal heights, stated deliberately */
+}
+
+/* LEFT — heading + the five steps. The PANEL (not the column) carries the
+   surface, so the area the grid stretches reads as intentional padding rather
+   than as an empty void under the last step. */
+.cta-left{
+  height:100%;display:flex;flex-direction:column;gap:26px;
+  background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius-lg);padding:clamp(26px,3.2vw,42px);
+  box-shadow:var(--shadow-sm);
+}
+.cta-cols h2{
+  font-size:clamp(1.7rem,3.1vw,2.4rem);margin-top:16px;line-height:1.06;
+}
+.cta-text{color:var(--muted);font-size:1rem;margin-top:14px;max-width:46ch}
+/* The flex gap already spaces the heading from the list; the base 40px would
+   stack on top of it. */
+.cta-left .steps{margin-top:6px;margin-bottom:0}
+
+/* RIGHT — the admission form. `> .form-card` is intentional: the base
+   .form-card rule (section 16) carries the card surface and this only makes it
+   fill the stretched column. The card is a flex column so the submit block can
+   be pushed to the bottom, which makes both columns finish on the same line
+   instead of the button floating at mid-height. */
+.cta-right{height:100%;display:flex;flex-direction:column}
+.cta-right>.form-card{flex:1 1 auto;display:flex;flex-direction:column}
+.cta-right .form-card form{display:flex;flex-direction:column;flex:1 1 auto}
+.cta-right .form-foot{margin-top:auto}
+
+/* --- initiatives strip --------------------------------------------------- */
+.ini-sec{padding:0 0 30px}
+.initiatives{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;
+}
+.initiative{
+  position:relative;
+  display:flex;flex-direction:column;gap:18px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;min-height:186px;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s;
+}
+.initiative:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+/* Keyboard parity: the cards are links, so they must show focus as clearly as
+   hover. Hover moves the card, so focus does the same plus a visible ring —
+   :focus-visible only, so a mouse click does not leave a ring behind. */
+.initiative:focus-visible{outline:none;transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.initiative:focus-visible::after{
+  content:"";position:absolute;inset:-3px;border-radius:calc(var(--radius) + 3px);
+  border:2px solid var(--teal-2);pointer-events:none;
+}
+.ini-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+/* The logo sits on a 104px tone-tinted plate. The plate keeps every card
+   optically aligned whatever the source image's proportions are, so a square
+   seal and a wide lockup still read as one family.
+
+   SIZING (v21): the mark was 26px on a 52px plate, which rendered the actual
+   glyph at roughly 14px once each source file's own transparent padding was
+   accounted for \u2014 unreadably small. The plate is now 104px (2\u00d7) and the
+   image fills 80% of it (80px), so the tray adds the breathing room instead of
+   the artwork's padding doing all the work. 80px from a 192px source is still a
+   DOWNSCALE (2.4:1), so the mark stays crisp \u2014 never upscaled or blurred.
+
+   Both the plate AND the image are sized explicitly. The <img> also carries
+   width/height attributes in the markup, so the browser reserves the box before
+   the file arrives and the six cards cannot shift as the logos load. */
+.ini-logo{
+  width:104px;height:104px;flex:0 0 auto;border-radius:28px;display:grid;place-items:center;
+  overflow:hidden;
+}
+.ini-logo svg,.ini-logo img{width:80px;height:80px;display:block}
+/* A real logo usually carries its own colour, so it is not recoloured the way
+   the stroke icons are (they inherit `currentColor`) — it is only contained and
+   kept from stretching. object-fit keeps any non-square upload readable. */
+.ini-logo img{object-fit:contain}
+.ini-arrow{
+  width:34px;height:34px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;
+  border:1.5px solid var(--line);color:var(--ink-3);
+  transition:background .25s,color .25s,border-color .25s,transform .3s var(--ease);
+}
+.ini-arrow svg{width:15px;height:15px}
+.initiative:hover .ini-arrow{background:var(--ink);color:var(--cream);border-color:var(--ink);transform:translate(2px,-2px)}
+.ini-body{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.ini-name{font-size:1.08rem;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.ini-tag{font-size:.88rem;color:var(--muted);line-height:1.6}
+/* Three palette tones, assigned per initiative in data/site.json → tone. */
+.initiative.tone-teal .ini-logo{background:var(--teal-soft);color:var(--teal-2)}
+.initiative.tone-amber .ini-logo{background:var(--amber-soft);color:#8A5A00}
+.initiative.tone-coral .ini-logo{background:var(--coral-soft);color:var(--coral)}
+
+/* --- responsive: closing CTA + initiatives -------------------------------- */
+@media(max-width:1024px){
+  /* Tablet: initiatives go to two columns. */
+  .initiatives{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+  /* Stack the columns. Each keeps its NATURAL height here, so there is nothing
+     left to align — the equal-height rule simply stops applying, which is the
+     correct behaviour once the columns are no longer side by side. */
+  .cta-cols{grid-template-columns:1fr;gap:30px}
+  .cta-left,.cta-right{height:auto}
+}
+@media(max-width:620px){
+  .initiatives{grid-template-columns:1fr;gap:14px}
+  .cta-sec{padding:56px 0 76px}
+  .ini-sec{padding-bottom:14px}
+  .cta-left{border-radius:26px;padding:24px 22px 28px}
+  .initiative{min-height:0;padding:22px}
+  /* On one column the card is only ~327px wide at 375px, so the plate steps
+     down from 104px to 80px \u2014 still more than 3\u00d7 the old 26px mark, and
+     still clear of the text column. The IMG is kept in step with the SVG: the
+     <img> attributes describe the DESKTOP plate (104x104), which CSS would
+     otherwise stop overriding the moment the image loads, leaving a 104px logo
+     inside an 80px plate. That mismatch is what this rule prevents. */
+  .ini-logo{width:80px;height:80px;border-radius:22px}
+  .ini-logo svg,.ini-logo img{width:62px;height:62px}
+}
+

@@ -1,0 +1,286 @@
+<!-- pages/index.html — HOME -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      {{HERO_BADGE}}
+      <span class="eyebrow reveal">{{HERO_EYEBROW}}</span>
+      <h1 class="display reveal d1">{{HERO_TITLE}}</h1>
+      <p class="lead reveal d2">{{HERO_LEAD}}</p>
+      <div class="hero-actions reveal d3">
+        <a href="{{HERO_PRIMARY_HREF}}" class="btn btn-primary">{{HERO_PRIMARY_LABEL}}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <a href="{{HERO_SECONDARY_HREF}}" class="btn btn-ghost">{{HERO_SECONDARY_LABEL}}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+      <div class="hero-tags reveal d4">{{HERO_TAGS}}</div>
+    </div>
+    <div class="hero-visual reveal d2">
+      {{HERO_FLOAT_CARDS}}
+      <div class="hero-frame">
+        <img src="{{HERO_IMAGE}}" alt="{{HERO_IMAGE_ALT}}" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">{{MARQUEE}}</div>
+</div>
+
+<!-- Founder message -->
+<section class="pad">
+  <div class="wrap">
+    <div class="founder reveal">
+      <div class="founder-inner">
+        <div class="founder-photo">
+          <img src="assets/images/founder.png" alt="Amir Hossain Rozel, Founder and Chairman of Edulife IT School" loading="lazy" />
+          <div class="badge"><small>Our promise</small><b>Every child can grow</b></div>
+        </div>
+        <div>
+          <span class="eyebrow on-dark">A message from our founder</span>
+          <h2 class="display">A school built around <em>possibility.</em></h2>
+          <blockquote>&ldquo;We started Edulife with one belief: children deserve a learning environment that gives them strong foundations, a confident voice and the courage to build something of their own.&rdquo;</blockquote>
+          <div class="sig">
+            <b>Amir Hossain Rozel</b>
+            <span>Founder &amp; Chairman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pillars + stats -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About Edulife IT School</span>
+      <h2 class="display">Learning that builds confidence for life.</h2>
+      <p>We bring strong foundations, confident communication and future-ready skills together in one caring school community.</p>
+    </div>
+    <div class="pillars">
+        {{BLOCK_PILLARS}}
+    </div>
+    <div class="stats">
+        {{BLOCK_STATS}}
+    </div>
+  </div>
+</section>
+
+<!-- Why choose -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Why choose Edulife?</span>
+        <h2 class="display">A stronger start for a changing world.</h2>
+        <p>Alongside the national curriculum, our own curriculum helps children build confidence, communication and practical skills from the earliest years.</p>
+      </div>
+      <span class="eyebrow reveal d2" style="background:var(--amber-soft);padding:10px 18px;border-radius:999px">What makes us different</span>
+    </div>
+    <div class="features">
+        {{BLOCK_FEATURES}}
+    </div>
+  </div>
+</section>
+
+<!-- Life / gallery preview -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Life at Edulife</span>
+        <h2 class="display">A school day full of possibility.</h2>
+        <p>Explore the moments, people and projects that make learning at Edulife feel alive.</p>
+      </div>
+      <a href="gallery.html" class="btn btn-ghost reveal d2">View full gallery
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5H19V11"/><path d="M19 5 5 19"/></svg>
+      </a>
+    </div>
+    <div class="gallery" data-source="gallery" data-pick="items" data-view="gallery" data-limit="5">
+        {{BLOCK_GALLERY_HOME}}
+    </div>
+  </div>
+</section>
+
+<!-- Teachers preview -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The people behind the learning</span>
+        <h2 class="display">Meet our teachers.</h2>
+        <p>Warm mentors with the experience and curiosity to help every child grow.</p>
+      </div>
+      <a href="teachers.html" class="btn btn-ghost reveal d2">Meet the whole team
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5H19V11"/><path d="M19 5 5 19"/></svg>
+      </a>
+    </div>
+    <div class="teachers" data-source="teachers" data-pick="staff" data-view="teachers" data-limit="8">
+        {{BLOCK_TEACHERS_HOME}}
+    </div>
+  </div>
+</section>
+
+<!-- Notice & events preview -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">School updates</span>
+        <h2 class="display">Notice &amp; Events</h2>
+        <p>Keep up with important announcements and the moments that bring our school community together.</p>
+      </div>
+      <span class="eyebrow reveal d2" style="background:var(--amber-soft);padding:10px 18px;border-radius:999px">Edulife bulletin</span>
+    </div>
+    <div class="boards">
+      <article class="board reveal d1">
+        <div class="board-head teal">
+          <div><small>Latest updates</small><h3>Notice Board</h3></div>
+          <a href="notice.html">View all</a>
+        </div>
+        <div class="board-list" data-source="notices" data-pick="items" data-view="notices" data-limit="3">
+        {{BLOCK_NOTICES}}
+        </div>
+      </article>
+      <article class="board reveal d2">
+        <div class="board-head ink">
+          <div><small>Mark your calendar</small><h3>Upcoming Events</h3></div>
+          <a href="events.html">View all</a>
+        </div>
+        <div class="board-list" data-source="events" data-pick="items" data-view="events" data-limit="3">
+        {{BLOCK_EVENTS}}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Journal preview -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="journal reveal">
+      <div class="head-row">
+        <div class="sec-head">
+          <span class="eyebrow on-dark">From the Edulife journal</span>
+          <h2 class="display">Ideas for curious families.</h2>
+          <p>Practical stories and thoughtful ideas for helping children learn, speak and grow.</p>
+        </div>
+        <a href="blog.html" class="btn btn-light">Explore all articles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5H19V11"/><path d="M19 5 5 19"/></svg>
+        </a>
+      </div>
+      <div class="journal-grid">
+        {{BLOCK_JOURNAL_FEATURE}}
+        <div class="j-list">
+        {{BLOCK_JOURNAL_ITEMS}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Closing admission section — "Five clear steps"
+     --------------------------------------------------------------------------
+     Replaces the old CTA band. LEFT = the five admission steps. RIGHT = the
+     admission inquiry form, so a guardian can read the process and apply
+     without leaving the homepage.
+
+     Two things are shared rather than copied, on purpose:
+       • the STEPS come from data/site.json → admissionSteps — the very same
+         array /admission renders, so the two pages can never describe a
+         different process;
+       • the step and form markup uses the SAME .step / .form-card / .field
+         classes as /admission, so the two pages cannot drift apart visually.
+
+     Structurally the two columns MUST end on the same line — `.cta-cols` is a
+     CSS grid whose items stretch to the taller one (align-items:stretch, the
+     default, stated on purpose) with each column at height:100%, so the form
+     card fills the stretched box. Below 860px the grid collapses to one column
+     and equal height stops applying on purpose.
+     ========================================================================== -->
+<section class="cta-sec">
+  <div class="wrap">
+    <div class="cta-cols">
+
+        <div class="cta-left">
+          <div class="reveal">
+            <span class="eyebrow">{{CTA_EYEBROW}}</span>
+            <h2 class="display">{{CTA_TITLE}}</h2>
+            <p class="cta-text">{{CTA_TEXT}}</p>
+          </div>
+          <div class="steps">
+            {{BLOCK_STEPS}}
+          </div>
+        </div>
+
+        <div class="cta-right">
+          <!-- The same form the Admission page carries, with IDs prefixed `cta`
+               so the two pages can never collide if they are ever combined.
+               The class dropdown is generated from data/site.json → classes.items
+               via classOption(), so adding a class updates it automatically. -->
+          <div class="form-card reveal d2">
+            <h3>{{CTA_FORM_TITLE}}</h3>
+            <p class="sub">{{CONTACT_REPLY_TIME}}</p>
+            <form data-validate novalidate>
+              <div class="form-grid">
+                <div class="field"><label for="ctaStudentName">Student name</label><input id="ctaStudentName" name="studentName" type="text" placeholder="Full name" required /></div>
+                <div class="field"><label for="ctaParentName">Parent name</label><input id="ctaParentName" name="parentName" type="text" placeholder="Full name" required /></div>
+                <div class="field"><label for="ctaPhone">Phone</label><input id="ctaPhone" name="phone" type="tel" placeholder="+880 1XXX XXXXXX" required /></div>
+                <div class="field"><label for="ctaEmail">Email</label><input id="ctaEmail" name="email" type="email" placeholder="you@example.com" /></div>
+                <div class="field"><label for="ctaClassLevel">Class</label>
+                  <select id="ctaClassLevel" name="classLevel">
+                    <option value="">Select a class</option>
+                    {{BLOCK_CLASS_OPTIONS}}
+                  </select>
+                </div>
+                <div class="field"><label for="ctaCampus">Preferred campus</label>
+                  <select id="ctaCampus" name="campus">
+                    <option value="">Select a campus</option>
+                    <option>Khagrachari Campus</option><option>Luxmichari Campus</option>
+                  </select>
+                </div>
+                <div class="field full"><label for="ctaMessage">Message</label><textarea id="ctaMessage" name="message" placeholder="Tell us a little about your child and what you are looking for."></textarea></div>
+              </div>
+              <div class="form-foot">
+                <button type="submit" class="btn btn-amber">{{CTA_SUBMIT}}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </button>
+                <p class="form-note">{{CTA_FORM_NOTE}}</p>
+                <div class="form-success">{{CTA_SUCCESS}}</div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     The Edulife family — other initiatives
+     --------------------------------------------------------------------------
+     Cards are rendered from data/site.json → initiatives.items by
+     initiativeCard(). Add an entry there and it appears here after a rebuild.
+     ========================================================================== -->
+<section class="ini-sec">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">{{INI_EYEBROW}}</span>
+        <h2 class="display">{{INI_TITLE}}</h2>
+        <p>{{INI_TEXT}}</p>
+      </div>
+      <span class="eyebrow reveal d2" style="background:var(--amber-soft);padding:10px 18px;border-radius:999px">Growing with purpose</span>
+    </div>
+    <div class="initiatives" data-source="site" data-pick="initiatives.items" data-view="initiatives">
+        {{BLOCK_INITIATIVES}}
+    </div>
+  </div>
+</section>
+

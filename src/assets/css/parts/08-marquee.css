@@ -1,0 +1,13 @@
+/* --------------------------------------------------------------------------
+   8. Marquee
+   -------------------------------------------------------------------------- */
+.marquee{background:var(--ink);color:var(--cream);padding:20px 0;overflow:hidden;position:relative;z-index:2}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scrollx 34s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{
+  font-family:'Fraunces',serif;font-size:clamp(1.1rem,2.2vw,1.7rem);font-weight:500;
+  padding:0 30px;display:inline-flex;align-items:center;gap:30px;white-space:nowrap;color:rgba(251,247,240,.92)
+}
+.marquee-track span::after{content:"✦";color:var(--amber);font-size:.8em}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+

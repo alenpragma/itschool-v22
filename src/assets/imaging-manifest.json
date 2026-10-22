@@ -1,0 +1,134 @@
+{
+  "assets/images/classroom.jpg": {
+    "webp": "assets/images/opt/classroom.webp",
+    "width": 1200,
+    "height": 655,
+    "bytes": 80200
+  },
+  "assets/images/founder.png": {
+    "webp": "assets/images/opt/founder.webp",
+    "width": 300,
+    "height": 300,
+    "bytes": 7484
+  },
+  "assets/images/m-rafiq.jpg": {
+    "webp": "assets/images/opt/m-rafiq.webp",
+    "width": 700,
+    "height": 1050,
+    "bytes": 50434
+  },
+  "assets/images/permit-khagrachari.jpg": {
+    "webp": "assets/images/opt/permit-khagrachari.webp",
+    "width": 989,
+    "height": 1400,
+    "bytes": 133434
+  },
+  "assets/images/permit-luxmichari.jpg": {
+    "webp": "assets/images/opt/permit-luxmichari.webp",
+    "width": 680,
+    "height": 760,
+    "bytes": 79046
+  },
+  "assets/images/t-pinky.jpg": {
+    "webp": "assets/images/opt/t-pinky.webp",
+    "width": 900,
+    "height": 601,
+    "bytes": 81632
+  },
+  "assets/images/t-rafiq.jpg": {
+    "webp": "assets/images/opt/t-rafiq.webp",
+    "width": 900,
+    "height": 1350,
+    "bytes": 22146
+  },
+  "assets/images/t-razia.jpg": {
+    "webp": "assets/images/opt/t-razia.webp",
+    "width": 900,
+    "height": 600,
+    "bytes": 20238
+  },
+  "assets/images/t-sadia.jpg": {
+    "webp": "assets/images/opt/t-sadia.webp",
+    "width": 900,
+    "height": 602,
+    "bytes": 19958
+  },
+  "assets/images/t-susmi.jpg": {
+    "webp": "assets/images/opt/t-susmi.webp",
+    "width": 900,
+    "height": 600,
+    "bytes": 43834
+  },
+  "assets/images/t-tanvir.jpg": {
+    "webp": "assets/images/opt/t-tanvir.webp",
+    "width": 900,
+    "height": 1350,
+    "bytes": 49242
+  },
+  "assets/images/t-topajjol.jpg": {
+    "webp": "assets/images/opt/t-topajjol.webp",
+    "width": 900,
+    "height": 1350,
+    "bytes": 47946
+  },
+  "assets/images/u-carnival.jpg": {
+    "webp": "assets/images/opt/u-carnival.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 112572
+  },
+  "assets/images/u-classroom.jpg": {
+    "webp": "assets/images/opt/u-classroom.webp",
+    "width": 1200,
+    "height": 747,
+    "bytes": 59592
+  },
+  "assets/images/u-coding.jpg": {
+    "webp": "assets/images/opt/u-coding.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 46720
+  },
+  "assets/images/u-collab.jpg": {
+    "webp": "assets/images/opt/u-collab.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 37740
+  },
+  "assets/images/u-digital.jpg": {
+    "webp": "assets/images/opt/u-digital.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 78690
+  },
+  "assets/images/u-homework.jpg": {
+    "webp": "assets/images/opt/u-homework.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 46044
+  },
+  "assets/images/u-lab.jpg": {
+    "webp": "assets/images/opt/u-lab.webp",
+    "width": 1200,
+    "height": 798,
+    "bytes": 70078
+  },
+  "assets/images/u-reading.jpg": {
+    "webp": "assets/images/opt/u-reading.webp",
+    "width": 1200,
+    "height": 847,
+    "bytes": 28322
+  },
+  "assets/images/u-showcase.jpg": {
+    "webp": "assets/images/opt/u-showcase.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 44122
+  },
+  "assets/images/u-speaking.jpg": {
+    "webp": "assets/images/opt/u-speaking.webp",
+    "width": 1200,
+    "height": 800,
+    "bytes": 92452
+  }
+}

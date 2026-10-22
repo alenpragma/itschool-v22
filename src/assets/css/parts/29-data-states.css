@@ -1,0 +1,62 @@
+/* --------------------------------------------------------------------------
+   29. Data-layer states  (hydration: loading / empty / error)
+   --------------------------------------------------------------------------
+   Applied by data-loader.js to any [data-source] container.
+
+   DESIGN RULE: these are states of a section that ALREADY HAS CONTENT. An
+   error must never blank a section, so .is-error adds a note and nothing else;
+   only .is-empty (the collection genuinely has no items) hides content. The
+   reserved note height keeps the layout from jumping when a state appears or
+   clears.
+
+   .is-loading is intentionally almost invisible: the build-time markup is
+   already on screen and correct, so a skeleton or spinner would be a lie about
+   the page being empty. We only dim slightly, which reads as "refreshing".
+   -------------------------------------------------------------------------- */
+
+.data-note {
+  grid-column: 1 / -1;
+  margin: 18px 0 0;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--muted);
+  background: var(--paper);
+  border: 1px dashed var(--line-2);
+}
+
+/* Empty: the collection has no items. Neutral, not alarming. */
+.is-empty .data-note {
+  border-style: solid;
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Error: the last good content stays; only the note changes tone. */
+.is-error .data-note {
+  color: #8a3b1e;
+  background: var(--coral-soft);
+  border: 1px solid rgba(228, 87, 46, 0.35);
+}
+
+/* Loading: dim the stale content very slightly. No spinner, no skeleton —
+   see the design rule above. */
+.is-loading > *:not(.data-note) {
+  opacity: 0.72;
+  transition: opacity 0.2s var(--ease);
+}
+
+/* Respect a reduced-motion preference: no fade, just the state. */
+@media (prefers-reduced-motion: reduce) {
+  .is-loading > *:not(.data-note) {
+    transition: none;
+  }
+}
+
+/* Print: a state note is UI, not content. */
+@media print {
+  .data-note {
+    display: none;
+  }
+}

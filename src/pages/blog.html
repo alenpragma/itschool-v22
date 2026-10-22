@@ -1,0 +1,55 @@
+<!-- pages/blog.html — THE EDULIFE JOURNAL -->
+<section class="page-hero">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="p-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="inner">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Journal</span></nav>
+      <span class="eyebrow">The Edulife journal</span>
+      <h1 class="display">Ideas for curious families.</h1>
+      <p class="lead">Practical stories and thoughtful ideas for helping children learn, speak and grow — written by the people who teach them.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="filters reveal" data-filter-group="category" data-target="[data-posts]" data-empty="#postEmpty" role="group" aria-label="Filter articles by topic">
+      <button class="chip active" data-filter="all" aria-pressed="true">All articles</button>
+      <button class="chip" data-filter="Parenting" aria-pressed="false">Parenting</button>
+      <button class="chip" data-filter="Learning" aria-pressed="false">Learning</button>
+      <button class="chip" data-filter="Technology" aria-pressed="false">Technology</button>
+      <button class="chip" data-filter="School life" aria-pressed="false">School life</button>
+    </div>
+
+    <div class="posts" data-posts data-source="blog" data-pick="items" data-view="blog">
+        {{BLOCK_POSTS}}
+    </div>
+    <div class="empty" id="postEmpty">No articles in this topic yet.</div>
+  </div>
+</section>
+
+<!-- Journal spotlight (dark panel) -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="journal reveal">
+      <div class="head-row">
+        <div class="sec-head">
+          <span class="eyebrow on-dark">Editor's pick</span>
+          <h2 class="display">Start here.</h2>
+          <p>If you only read one thing this term, make it this one.</p>
+        </div>
+        <a href="admission.html" class="btn btn-light">Talk to our team
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5H19V11"/><path d="M19 5 5 19"/></svg>
+        </a>
+      </div>
+      <div class="journal-grid">
+        {{BLOCK_JOURNAL_FEATURE}}
+        <div class="j-list">
+        {{BLOCK_JOURNAL_ITEMS_B}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

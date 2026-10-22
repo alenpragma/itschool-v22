@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- ==========================================================================
+     layouts/base.html — the single shared shell for every page
+     --------------------------------------------------------------------------
+     Every page in pages/*.html is wrapped in this layout by build.js.
+     It owns <head>, the generated header, the mobile drawer, the footer,
+     the shared scripts, and nothing else: page-specific markup lives only in
+     pages/*.html, between the tokens below.
+
+     Tokens replaced by build.js
+       {{PAGE_TITLE}}       <title> text
+       {{PAGE_DESCRIPTION}} <meta name="description">
+       {{CANONICAL}}        absolute or relative canonical URL
+       {{PAGE_KEY}}         body[data-page] — matches the nav `key`
+       {{LIVE}}             "true" to hydrate content from the API at runtime
+       {{HEADER}}           components/header.html
+       {{DRAWER}}           components/drawer.html
+       {{CONTENT}}          the page body fragment
+       {{ARTICLE_HEAD}}     detail pages only: page-scoped <head> extras
+       {{FOOTER}}           components/footer.html
+       {{LIGHTBOX}}         components/lightbox.html
+     ========================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Marks the document as JS-capable before first paint. Scroll-reveal
+       hides content ONLY when this class is present, so the page stays fully
+       readable if scripts are blocked or fail to load. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{PAGE_DESCRIPTION}}" />
+  <meta name="theme-color" content="#101B2D" />
+  <meta name="generator" content="edulife-static-build" />
+  <link rel="canonical" href="{{CANONICAL}}" />
+{{ARTICLE_HEAD}}
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Edulife IT School" />
+  <meta property="og:title" content="{{PAGE_TITLE}}" />
+  <meta property="og:description" content="{{PAGE_DESCRIPTION}}" />
+  <!-- Social share card uses the same full lockup as the header so link
+       previews match the branding visitors actually see on the page. -->
+  <meta property="og:image" content="assets/images/logo-full.png" />
+
+  <link rel="icon" href="assets/images/logo-seal.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body data-page="{{PAGE_KEY}}" data-live="{{LIVE}}">
+<div id="progress"></div>
+
+{{HEADER}}
+{{DRAWER}}
+
+<main id="top">
+{{CONTENT}}
+</main>
+
+{{FOOTER}}
+
+<button id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+{{LIGHTBOX}}
+
+<!-- Shared runtime: renderers (isomorphic list + detail markup) -> data-loader
+     (the static-JSON / REST seam) -> main.js (page behaviours) -> article.js
+     (the ?type=&slug= detail route; a no-op on pages without #articleMount).
+     Classic scripts, not modules, so the site also works from file:// and from
+     any static host. -->
+<script src="assets/js/renderers.js"></script>
+<script src="assets/js/data-loader.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/article.js"></script>
+
+<!-- ==========================================================================
+     LIVE CHAT (tawk.to) — loads on EVERY page of the site.
+     --------------------------------------------------------------------------
+     To switch chat on, you only ever edit TWO constants, both in one place:
+
+         assets/js/chat.js   →  TAWK_PROPERTY_ID
+                                TAWK_WIDGET_ID
+
+     Find both values in your tawk.to dashboard:
+         Administration → Channels → Chat Widget → Direct Chat Link
+     The link looks like  https://tawk.to/chat/<PROPERTY_ID>/<WIDGET_ID>.
+
+     Until real IDs are pasted in, chat.js deliberately loads nothing at all
+     (no widget, no console errors) — the site simply works without chat.
+     Full walkthrough: README.md §9 "Live chat (tawk.to)".
+     ========================================================================== -->
+<script src="assets/js/chat.js"></script>
+</body>
+</html>

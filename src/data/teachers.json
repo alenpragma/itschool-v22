@@ -1,0 +1,109 @@
+{
+  "$comment": "Teachers & leadership. GET /teachers -> { leadership: [...], staff: [...] }. `campus` values must match a campus id in site.json for the filter chips to align.",
+  "leadership": [
+    {
+      "name": "Amir Hossain Rozel",
+      "role": "Founder & Chairman",
+      "image": "assets/images/founder.png",
+      "bio": "Set the vision for a school where strong foundations, a confident voice and technology grow together."
+    },
+    {
+      "name": "Tanvir Chowdhury",
+      "role": "Academic Coordinator",
+      "image": "assets/images/t-tanvir.jpg",
+      "bio": "Connects the national curriculum with the skills children will need in the world ahead."
+    },
+    {
+      "name": "Topajjol Hossain Rasel",
+      "role": "Head Teacher, Luxmichari",
+      "image": "assets/images/t-topajjol.jpg",
+      "bio": "Leads a caring campus culture built on steady, visible progress for every learner."
+    }
+  ],
+  "staff": [
+    {
+      "name": "Razia Sultana Urmi",
+      "role": "Assistant Teacher",
+      "campus": "Khagrachari Campus",
+      "image": "assets/images/t-razia.jpg",
+      "bio": "Helping every child find a confident voice."
+    },
+    {
+      "name": "Pinky Chakma",
+      "role": "Assistant Teacher",
+      "campus": "Khagrachari Campus",
+      "image": "assets/images/t-pinky.jpg",
+      "bio": "Making every lesson warm, relevant and memorable."
+    },
+    {
+      "name": "Topajjol Hossain Rasel",
+      "role": "Head Teacher",
+      "campus": "Luxmichari Campus",
+      "image": "assets/images/t-topajjol.jpg",
+      "bio": "Leading a caring culture of steady progress."
+    },
+    {
+      "name": "Susmi Chakma",
+      "role": "Assistant Teacher",
+      "campus": "Luxmichari Campus",
+      "image": "assets/images/t-susmi.jpg",
+      "bio": "Building kind, curious and independent learners."
+    },
+    {
+      "name": "Md. Rafiq Hasan",
+      "role": "Computer & IT Mentor",
+      "campus": "Khagrachari Campus",
+      "image": "assets/images/t-rafiq.jpg",
+      "bio": "Making technology creative, practical and joyful."
+    },
+    {
+      "name": "Sadia Ahmed",
+      "role": "Class Teacher",
+      "campus": "Khagrachari Campus",
+      "image": "assets/images/t-sadia.jpg",
+      "bio": "Helping learners grow with confidence and care."
+    },
+    {
+      "name": "Farzana Akter",
+      "role": "Bangla & Social Studies",
+      "campus": "Luxmichari Campus",
+      "image": "assets/images/t-razia.jpg",
+      "bio": "Making every lesson meaningful and memorable."
+    },
+    {
+      "name": "Nusrat Jahan",
+      "role": "English & Phonetics",
+      "campus": "Khagrachari Campus",
+      "image": "assets/images/t-sadia.jpg",
+      "bio": "Turning daily conversation into clear, confident speech."
+    },
+    {
+      "name": "Bipul Chakma",
+      "role": "Mathematics",
+      "campus": "Luxmichari Campus",
+      "image": "assets/images/t-rafiq.jpg",
+      "bio": "Making number sense feel like play, not pressure."
+    },
+    {
+      "name": "Ayesha Siddika",
+      "role": "Science & Discovery",
+      "campus": "Khagrachari Campus",
+      "image": "assets/images/t-pinky.jpg",
+      "bio": "Turning curiosity into hands-on experiments."
+    },
+    {
+      "name": "Ching Chakma",
+      "role": "Arts & Wellbeing",
+      "campus": "Luxmichari Campus",
+      "image": "assets/images/t-susmi.jpg",
+      "bio": "Helping children express ideas with colour and care."
+    },
+    {
+      "name": "Shahin Alam",
+      "role": "Coding Lab Assistant",
+      "campus": "Luxmichari Campus",
+      "image": "assets/images/t-tanvir.jpg",
+      "bio": "Guiding first steps in block coding and problem solving."
+    }
+  ]
+}

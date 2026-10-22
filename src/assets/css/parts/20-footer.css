@@ -1,0 +1,15 @@
+/* --------------------------------------------------------------------------
+   20. Footer
+   -------------------------------------------------------------------------- */
+footer{background:var(--ink);color:rgba(251,247,240,.72);padding:70px 0 34px;margin-top:96px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+/* Footer background is navy, so the markup uses logo-full-light.png (cream
+   ink). No cream plate is needed any more - the artwork is transparent and the
+   light variant already carries the necessary contrast. */
+.foot-brand .brand-logo{height:52px;object-position:left center}
+.foot-brand p{margin-top:20px;font-size:.92rem;max-width:34ch;line-height:1.7}
+.foot-col h4{color:var(--cream);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.foot-col a{display:block;font-size:.92rem;padding:6px 0;transition:color .25s,transform .25s}
+.foot-col a:hover{color:var(--amber);transform:translateX(4px)}
+.foot-bottom{margin-top:52px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem}
+

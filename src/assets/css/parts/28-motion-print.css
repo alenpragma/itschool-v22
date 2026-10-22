@@ -1,0 +1,16 @@
+/* --------------------------------------------------------------------------
+   28. Motion & print
+   -------------------------------------------------------------------------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal,.js .reveal{opacity:1!important;transform:none!important}
+}
+@media print{
+  header,.drawer,.drawer-scrim,#toTop,#progress,.marquee,.hero-bg,.p-grid,.blob,
+  iframe[title*="chat" i],.tawk-min-container,#tawkchat-container{display:none!important}
+  body{background:#fff}
+  .reveal,.js .reveal{opacity:1!important;transform:none!important}
+  a{text-decoration:none}
+  .pad,.pad-sm{padding:22px 0}
+}

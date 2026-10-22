@@ -1,0 +1,30 @@
+<!-- pages/events.html — EVENTS -->
+<section class="page-hero">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="p-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="inner">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Events</span></nav>
+      <span class="eyebrow">Mark your calendar</span>
+      <h1 class="display">Upcoming Events</h1>
+      <p class="lead">The moments that bring our school community together — showcases, festivals, fairs and family meetings.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="filters reveal" data-filter-group="category" data-target="[data-events]" data-empty="#eventEmpty" role="group" aria-label="Filter events by type">
+      <button class="chip active" data-filter="all" aria-pressed="true">All events</button>
+      <button class="chip" data-filter="Academic" aria-pressed="false">Academic</button>
+      <button class="chip" data-filter="Community" aria-pressed="false">Community</button>
+      <button class="chip" data-filter="Technology" aria-pressed="false">Technology</button>
+    </div>
+
+    <div class="stack" data-events data-source="events" data-pick="items" data-view="eventsFull">
+        {{BLOCK_EVENTS_FULL}}
+    </div>
+    <div class="empty" id="eventEmpty">No events in this category yet.</div>
+
+  </div>
+</section>

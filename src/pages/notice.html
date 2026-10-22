@@ -1,0 +1,30 @@
+<!-- pages/notice.html — NOTICE BOARD -->
+<section class="page-hero">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="p-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="inner">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Notice</span></nav>
+      <span class="eyebrow">Latest updates</span>
+      <h1 class="display">Notice Board</h1>
+      <p class="lead">Announcements for families and students, newest first. Filter by category to find what matters to you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="filters reveal" data-filter-group="category" data-target="[data-notices]" data-empty="#noticeEmpty" role="group" aria-label="Filter notices by category">
+      <button class="chip active" data-filter="all" aria-pressed="true">All notices</button>
+      <button class="chip" data-filter="Admission" aria-pressed="false">Admission</button>
+      <button class="chip" data-filter="Academic" aria-pressed="false">Academic</button>
+      <button class="chip" data-filter="General" aria-pressed="false">General</button>
+    </div>
+
+    <div class="stack" data-notices data-source="notices" data-pick="items" data-view="noticesFull">
+        {{BLOCK_NOTICES_FULL}}
+    </div>
+    <div class="empty" id="noticeEmpty">No notices in this category yet.</div>
+  </div>
+</section>
+

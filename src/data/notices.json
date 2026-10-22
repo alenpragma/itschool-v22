@@ -1,0 +1,153 @@
+{
+  "$comment": "Notice board announcements. GET /notices -> { items: [...] }. Newest first — the home page consumes the first 3. Each item carries: slug (URL id for /notice/:slug), priority (Normal | Important | Urgent), department, audience[] and a `body` array of content blocks rendered by the detail page. Block types: lead | p | h2 | h3 | list | quote | callout | image.",
+  "items": [
+    {
+      "slug": "admissions-open-2027-academic-session",
+      "title": "Admissions are open for the 2027 academic session",
+      "category": "Admission",
+      "priority": "Urgent",
+      "department": "School Office",
+      "audience": ["Prospective parents", "Current families"],
+      "date": "2026-09-18",
+      "dateLabel": "18 Sep 2026",
+      "day": "18",
+      "monthYear": "Sep 2026",
+      "excerpt": "Applications are now being accepted for Nursery through Class 5.",
+      "action": { "label": "Start an application", "href": "admission.html" },
+      "body": [
+        { "type": "lead", "text": "Edulife IT School is now accepting applications for the 2027 academic session across both campuses. Places are offered for Nursery through Class 5." },
+        { "type": "h2", "text": "What you need to bring" },
+        { "type": "list", "items": ["A completed application form, available from the school office or online.", "The child's birth certificate (original and one photocopy).", "Two passport-size photographs of the child.", "The most recent report card from the previous school, if applicable.", "Parents' national ID copies."] },
+        { "type": "h2", "text": "How the process runs" },
+        { "type": "p", "text": "Every family follows the same five steps: submit the application, hear from our team, bring your child for a gentle age-appropriate assessment, meet us for a short parent discussion, and then receive the admission confirmation. There is no separate entrance examination and no preparation is required." },
+        { "type": "callout", "title": "Places are limited", "text": "We keep class sizes deliberately small, so places fill by section rather than by campus. Families who apply early have the widest choice of class time." },
+        { "type": "h2", "text": "Fees and campus allocation" },
+        { "type": "p", "text": "A full fee schedule and the session calendar are available from the school office on request. Admissions are handled jointly across Khagrachari and Luxmichari; you may state a preference, and we will confirm placement based on availability in your child's class." },
+        { "type": "quote", "text": "We would rather meet your family properly than process your paperwork quickly.", "cite": "School Office, Edulife IT School" },
+        { "type": "h2", "text": "Questions" },
+        { "type": "p", "text": "Our office is open Sunday to Thursday, 8:00 AM to 3:00 PM. You may also book a campus visit so your child can see a real school day before deciding." }
+      ]
+    },
+    {
+      "slug": "mid-term-assessment-schedule-published",
+      "title": "Mid-term assessment schedule published",
+      "category": "Academic",
+      "priority": "Important",
+      "department": "Academic Office",
+      "audience": ["All families", "Students"],
+      "date": "2026-09-12",
+      "dateLabel": "12 Sep 2026",
+      "day": "12",
+      "monthYear": "Sep 2026",
+      "excerpt": "Please review the updated schedule and preparation guide.",
+      "action": { "label": "Talk to the academic office", "href": "contact.html" },
+      "body": [
+        { "type": "lead", "text": "The mid-term assessment schedule has been reviewed and published. Every class from Nursery to Class 5 has a fixed sequence, and the daily routine in the week before it has been adjusted to allow quiet revision in class." },
+        { "type": "h2", "text": "What has changed this term" },
+        { "type": "p", "text": "Following feedback from families, assessments are now spread across morning sessions only. Afternoons stay as normal teaching time so that children are not carrying unfinished work home." },
+        { "type": "list", "items": ["Assessments take place in the morning session.", "Afternoon classes run as usual.", "All revision is completed in class; no separate preparation at home is required.", "Results are shared with families at the Parents' Progress Meeting."] },
+        { "type": "h2", "text": "For families" },
+        { "type": "p", "text": "The most useful thing you can do is keep the week calm and ordinary: normal bedtimes, a good breakfast, and no extra drilling at home. Children who arrive rested do better than children who arrive over-prepared." },
+        { "type": "callout", "title": "If your child is unwell", "text": "Please inform the class teacher as early as possible. A make-up session is arranged for any child who misses an assessment for a genuine medical reason." },
+        { "type": "h2", "text": "Reading your child's results" },
+        { "type": "p", "text": "Assessment here is a teaching tool, not a ranking. When we hand over results we will talk through what your child can do well, what is next, and what we are doing about it. If anything is unclear, ask. That conversation is part of the process." }
+      ]
+    },
+    {
+      "slug": "parent-orientation-morning",
+      "title": "Parent orientation morning",
+      "category": "General",
+      "priority": "Normal",
+      "department": "School Office",
+      "audience": ["New families", "Parents of Nursery to Class 1"],
+      "date": "2026-09-04",
+      "dateLabel": "04 Sep 2026",
+      "day": "04",
+      "monthYear": "Sep 2026",
+      "excerpt": "A warm welcome for new families joining the Edulife community.",
+      "action": { "label": "Reserve a place", "href": "contact.html" },
+      "body": [
+        { "type": "lead", "text": "We are holding a welcome morning for families who are new to Edulife this session. Parents and guardians of children in Nursery through Class 1 are warmly invited." },
+        { "type": "h2", "text": "What we will cover" },
+        { "type": "list", "items": ["A short introduction from the founder and the campus head teacher.", "How a typical school day is organised, from arrival to pick-up.", "Our approach to English, phonetics and the daily IT session.", "The notice board, the diary and how we communicate with families.", "Time for your questions, with tea."] },
+        { "type": "h2", "text": "Practical details" },
+        { "type": "p", "text": "The session runs in the morning and lasts around ninety minutes. Children are welcome to come along; there will be a supervised activity corner so you can concentrate." },
+        { "type": "callout", "title": "Please tell us you are coming", "text": "Space is limited to keep the morning comfortable and conversational. A quick message to the school office reserves your place." },
+        { "type": "h2", "text": "Why we run it" },
+        { "type": "p", "text": "Starting school is a change for the whole family, not just the child. An hour of orientation in advance means fewer questions on the first morning and a much smoother first fortnight for everyone." }
+      ]
+    },
+    {
+      "slug": "winter-uniform-guidelines-released",
+      "title": "Winter uniform guidelines released",
+      "category": "General",
+      "priority": "Normal",
+      "department": "School Office",
+      "audience": ["All families"],
+      "date": "2026-08-28",
+      "dateLabel": "28 Aug 2026",
+      "day": "28",
+      "monthYear": "Aug 2026",
+      "excerpt": "A short guide to the seasonal uniform and what families should prepare.",
+      "action": { "label": "Ask a question", "href": "contact.html" },
+      "body": [
+        { "type": "lead", "text": "The winter uniform guidelines for this session have been released. They are deliberately simple, and everything on the list can be purchased locally." },
+        { "type": "h2", "text": "What children need" },
+        { "type": "list", "items": ["A navy sweater or cardigan, worn over the regular uniform.", "A warm scarf in plain school colours — no other designs.", "Closed shoes suitable for cold mornings.", "Pupils in Class 3 and above may add a simple navy cap."] },
+        { "type": "h2", "text": "What is not required" },
+        { "type": "p", "text": "There is no separate winter set to buy and no branded outerwear. Any plain navy layer of the right warmth is acceptable. We would rather a child be warm in something unbranded than cold in something official." },
+        { "type": "callout", "title": "Families who need support", "text": "If purchasing uniform is difficult this season, please speak to the school office in confidence. A discreet support fund exists for exactly this purpose, and it is used more often than people assume." },
+        { "type": "h2", "text": "When it starts" },
+        { "type": "p", "text": "Winter uniform is worn from the start of the cold season and remains in use until we notify families otherwise. On unusually warm days, common sense applies: sweaters may be left at home." }
+      ]
+    },
+    {
+      "slug": "innovation-lab-extended-opening-hours",
+      "title": "Innovation Lab extended opening hours",
+      "category": "Academic",
+      "priority": "Normal",
+      "department": "IT Department",
+      "audience": ["Class 3 to Class 5", "All families"],
+      "date": "2026-08-20",
+      "dateLabel": "20 Aug 2026",
+      "day": "20",
+      "monthYear": "Aug 2026",
+      "excerpt": "The coding lab is now open for supervised practice after regular classes.",
+      "action": { "label": "Ask about the lab", "href": "contact.html" },
+      "body": [
+        { "type": "lead", "text": "The Innovation Lab is now open for a supervised practice session after regular classes, three afternoons each week. The extra time is offered at no additional cost." },
+        { "type": "h2", "text": "How the sessions work" },
+        { "type": "p", "text": "Practice time is open rather than taught. Children bring unfinished lab work or start something of their own, and a lab assistant is present throughout. There is no set curriculum and nothing is assessed." },
+        { "type": "list", "items": ["Open to pupils in Class 3 and above.", "Three afternoons per week, immediately after the school day.", "Places are limited by the number of machines available.", "Children must be collected promptly at the end of the session."] },
+        { "type": "callout", "title": "Who benefits most", "text": "Children who are mid-way through a project and simply want more time to finish it. Those who have not started anything are encouraged to begin in a regular class first." },
+        { "type": "h2", "text": "Signing up" },
+        { "type": "p", "text": "Places are allocated per term. A note from a parent or guardian is enough to be added to the list, and we will confirm the specific afternoons your child is assigned." },
+        { "type": "quote", "text": "The best projects we have seen were not started in class. They were finished after it.", "cite": "IT Department, Edulife IT School" }
+      ]
+    },
+    {
+      "slug": "annual-health-and-hygiene-check-completed",
+      "title": "Annual health and hygiene check completed",
+      "category": "General",
+      "priority": "Normal",
+      "department": "School Office",
+      "audience": ["All families"],
+      "date": "2026-08-11",
+      "dateLabel": "11 Aug 2026",
+      "day": "11",
+      "monthYear": "Aug 2026",
+      "excerpt": "Thank you to the medical team and to every family for your cooperation.",
+      "action": { "label": "Contact the office", "href": "contact.html" },
+      "body": [
+        { "type": "lead", "text": "The annual health and hygiene check has been completed across both campuses. Every pupil was seen, and individual notes have been sent home for families where follow-up is advisable." },
+        { "type": "h2", "text": "What was checked" },
+        { "type": "list", "items": ["General physical growth and nutrition indicators.", "Vision and hearing screening.", "Dental and general hygiene habits.", "Basic immunisation records, updated with families where needed."] },
+        { "type": "h2", "text": "A note on privacy" },
+        { "type": "p", "text": "Individual results were shared only with the child's own family, in a sealed note. No medical information is discussed in class, and no results are recorded on any document that other students can see." },
+        { "type": "callout", "title": "If you received a follow-up note", "text": "It is a suggestion, not an alarm. Most notes recommend a routine check with a family doctor or an adjustment at home. Please feel free to speak to the school office if anything is unclear." },
+        { "type": "h2", "text": "Thank you" },
+        { "type": "p", "text": "Our thanks to the volunteer medical team who gave their time across the week, and to every family for returning forms promptly and calmly. A healthy school is a joint effort, and this one worked well." }
+      ]
+    }
+  ]
+}

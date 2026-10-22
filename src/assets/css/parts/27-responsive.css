@@ -1,0 +1,53 @@
+/* --------------------------------------------------------------------------
+   27. Responsive
+   -------------------------------------------------------------------------- */
+@media(max-width:1024px){
+  .nav-links a{padding:9px 9px;font-size:13px}
+  .hero-inner{grid-template-columns:1fr;gap:60px}
+  .hero p.lead{max-width:52ch}
+  .founder-inner{grid-template-columns:1fr;gap:40px;padding:44px}
+  .founder-photo{max-width:340px}
+  .pillars,.features{grid-template-columns:1fr 1fr}
+  .teachers{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:1fr 1fr}
+  .posts{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .g-item.big{grid-column:span 2;grid-row:span 1}
+  .journal{padding:44px}
+  .journal-grid{grid-template-columns:1fr}
+  .admission-grid{grid-template-columns:1fr;gap:44px}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .stats{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .burger{display:grid}
+}
+@media(max-width:760px){
+  .pad{padding:70px 0}
+  .pad-top{padding-top:132px}
+  .page-hero{padding:130px 0 40px}
+  .pillars,.features,.teachers,.boards,.trust,.team,.posts{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:220px}
+  .g-item.big,.g-item.wide{grid-column:span 1}
+  .form-grid{grid-template-columns:1fr}
+  .form-card{padding:28px}
+  .foot-grid{grid-template-columns:1fr}
+  .float-card{display:none}
+  .fc-1{display:block;top:14px;left:14px}
+  .fc-2{display:block;bottom:14px;right:14px}
+  .fc-3{display:none}
+  .hero{padding-top:120px}
+  /* The lockup is 3:1, so scaling by height alone keeps it in proportion.
+     At 375px a 48px-tall logo is 144px wide, which leaves room for the burger
+     (44px) without crowding; 40px keeps a comfortable gutter. */
+  .brand-logo{height:40px}
+  .foot-brand .brand-logo{height:44px}
+  .row-card{grid-template-columns:1fr;gap:18px;padding:24px}
+  .row-card .stamp{border-right:none;border-bottom:1px solid var(--line);padding:0 0 16px;text-align:left;display:flex;align-items:baseline;gap:12px}
+  .row-card .go{display:none}
+  .lightbox{padding:18px}
+}
+

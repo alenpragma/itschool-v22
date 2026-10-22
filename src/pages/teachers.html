@@ -1,0 +1,53 @@
+<!-- pages/teachers.html — TEACHERS -->
+<section class="page-hero">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="p-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="inner">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Teachers</span></nav>
+      <span class="eyebrow">The people behind the learning</span>
+      <h1 class="display">Meet our teachers.</h1>
+      <p class="lead">Warm mentors with the experience and curiosity to help every child grow. Filter by campus to see who teaches at each location.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Faculty roster with campus filter -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Faculty</span>
+        <h2 class="display">Every classroom has a guide.</h2>
+        <p>Our teachers know each learner closely and provide the encouragement, feedback and structure they need.</p>
+      </div>
+      <span class="eyebrow reveal d2" style="background:var(--amber-soft);padding:10px 18px;border-radius:999px">12 educators</span>
+    </div>
+
+    <div class="filters reveal" data-filter-group="campus" data-target="[data-faculty]" data-empty="#facultyEmpty" role="group" aria-label="Filter teachers by campus">
+      <button class="chip active" data-filter="all" aria-pressed="true">All campuses</button>
+      <button class="chip" data-filter="Khagrachari Campus" aria-pressed="false">Khagrachari</button>
+      <button class="chip" data-filter="Luxmichari Campus" aria-pressed="false">Luxmichari</button>
+    </div>
+
+    <div class="teachers" data-faculty data-source="teachers" data-pick="staff" data-view="teachers">
+        {{BLOCK_TEACHERS_FULL}}
+    </div>
+    <div class="empty" id="facultyEmpty">No teachers match this campus filter yet.</div>
+  </div>
+</section>
+
+<!-- Leadership -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Leadership</span>
+      <h2 class="display">The people steering the school.</h2>
+      <p>A small leadership group with a long-term view of what primary education should build.</p>
+    </div>
+    <div class="team" data-source="teachers" data-pick="leadership" data-view="leadership">
+        {{BLOCK_LEADERSHIP}}
+    </div>
+  </div>
+</section>
+

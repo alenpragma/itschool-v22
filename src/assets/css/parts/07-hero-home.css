@@ -1,0 +1,121 @@
+/* --------------------------------------------------------------------------
+   7. Hero (home)
+   -------------------------------------------------------------------------- */
+.hero{position:relative;padding:150px 0 70px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-bg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.hero-bg .b1{width:520px;height:520px;background:#BFE7DE;top:-160px;right:-120px}
+.hero-bg .b2{width:420px;height:420px;background:#FCE3B8;bottom:-180px;left:-140px;opacity:.55}
+.hero-grid{position:absolute;inset:0;z-index:0;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 20%,transparent 75%);
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 20%,transparent 75%);
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+/* --- admissions badge: the hero's SECONDARY highlight ----------------------
+   HIERARCHY RULE (why this does not overpower the headline)
+   Three things keep the badge subordinate to the <h1> and the primary CTA:
+
+     1. SCALE. 12.5px against a 73.6px h1 (desktop) is a 5.9x ratio, and the
+        badge's measured 38px total height is a fraction of the primary
+        button's 56px. It reads as a label, never as a competing headline.
+     2. ONE FILLED ELEMENT. Only the badge carries a solid fill in the hero's
+        text column. It is therefore unmistakably "the highlight" without
+        needing extra size, because nothing else nearby competes for that
+        signal. The eyebrow below it stays text-only (a dash, no plate), so the
+        two small items do not read as two competing pills.
+     3. CONTRAST AXIS. The badge is amber-on-ink; the primary CTA is
+        cream-on-ink; the headline is ink-on-cream. The badge is the only warm
+        chip on the page, which is what makes it noticed first — but its ink
+        text keeps it tied to the same palette, so it does not look like an ad.
+
+   Contrast: #101B2D text on #F5A524 is 8.9:1 — well past WCAG AA (4.5:1) and
+   AAA (7:1) for normal text, so the small size is safe.
+
+   It is a real link to the admissions notice, not decoration: the notice holds
+   the dates, campuses and class range a parent wants next. */
+.hero-badge-row{margin:0 0 16px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--amber);color:var(--ink);
+  font-size:12.5px;font-weight:800;letter-spacing:.06em;
+  padding:9px 16px;border-radius:999px;
+  box-shadow:0 10px 24px -14px rgba(245,165,36,.95);
+  /* WRAPPING (added v22 with the longer 39-char wording).
+     The label is one line down to 340px; below that it must wrap. Two rules keep
+     the wrapped state looking intentional rather than accidental:
+       - max-width:100% so the pill can never push the hero column wider than the
+         viewport (at <=360px it becomes a full-width pill, which reads as a
+         deliberate shape rather than a clipped one).
+       - text-wrap:balance splits the two lines evenly. Measured at 320px: a plain
+         wrap gave 211px + 34px, leaving "seats" orphaned on its own line;
+         balance gives 125px + 121px. No effect at all from 340px up.
+     border-radius:999px is kept deliberately: on a two-line fill the pill
+     degenerates to a rounded rectangle exactly like a fully-rounded button, so
+     the single- and multi-line states stay visually consistent. */
+  max-width:100%;
+  text-wrap:balance;
+  transition:transform .25s var(--ease),box-shadow .25s,background .25s;
+}
+.hero-badge:hover{transform:translateY(-2px);background:#ffb63d;box-shadow:0 16px 30px -14px rgba(245,165,36,1)}
+/* Keyboard parity with the hover lift. :focus-visible only, so a mouse click
+   does not leave a ring behind. */
+.hero-badge:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+/* The pulsing dot is the "open / live" cue. Decorative (aria-hidden in the
+   markup) — the words "Admissions open" already carry the meaning, so a screen
+   reader is not read a second, meaningless status. */
+.hb-dot{
+  width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:var(--ink);
+  box-shadow:0 0 0 0 rgba(16,27,45,.45);animation:hbPulse 2.4s var(--ease) infinite;
+}
+@keyframes hbPulse{
+  0%{box-shadow:0 0 0 0 rgba(16,27,45,.45)}
+  70%{box-shadow:0 0 0 7px rgba(16,27,45,0)}
+  100%{box-shadow:0 0 0 0 rgba(16,27,45,0)}
+}
+/* Respect a reduced-motion preference: keep the dot, drop the pulse. */
+@media(prefers-reduced-motion:reduce){
+  .hb-dot{animation:none}
+}
+@media(max-width:480px){
+  /* At 375px the h1 is 41.6px, so the badge drops to 11.5px to keep the
+     ~3.6x ratio and the same "label, not headline" reading. */
+  .hero-badge-row{margin-bottom:13px}
+  .hero-badge{font-size:11.5px;padding:8px 14px;gap:8px}
+}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.6rem);margin:22px 0 0;color:var(--ink)}
+.hero h1 .accent{color:var(--teal);position:relative;white-space:nowrap}
+.hero h1 .accent::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--amber);
+  border-radius:4px;z-index:-1;transform:scaleX(0);transform-origin:left;animation:swipe 1s .5s var(--ease) forwards;
+}
+@keyframes swipe{to{transform:scaleX(1)}}
+.hero p.lead{margin-top:24px;font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--muted);max-width:33ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.hero-tags span{
+  font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+  background:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:999px;
+}
+.hero-visual{position:relative}
+.hero-frame{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--teal-soft);
+  padding:12px;box-shadow:var(--shadow-lg);
+}
+.hero-frame img{width:100%;aspect-ratio:1.05;object-fit:cover;border-radius:26px}
+.float-card{
+  position:absolute;background:var(--paper);border-radius:18px;padding:15px 20px;
+  box-shadow:0 20px 44px -14px rgba(16,27,45,.30),0 2px 6px rgba(16,27,45,.08);
+  border:1px solid rgba(16,27,45,.06);
+  z-index:3;animation:floaty 6s ease-in-out infinite;
+}
+.float-card small{display:block;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.float-card b{display:block;font-size:15px;font-weight:800;margin-top:3px}
+.fc-1{top:26px;left:-26px}
+.fc-2{bottom:34px;right:-22px;background:var(--ink);color:var(--cream);animation-delay:-3s}
+.fc-2 small{color:#8FD8C9}
+.fc-3{bottom:-18px;left:34px;background:var(--amber);animation-delay:-1.5s}
+.fc-3 small{color:rgba(16,27,45,.65)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+

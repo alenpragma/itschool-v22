@@ -1,0 +1,9 @@
+/* ==========================================================================
+   Edulife IT School — Global stylesheet
+   --------------------------------------------------------------------------
+   Design tokens + component styles shared by every page.
+   Palette : cream canvas · navy ink · teal primary · amber / coral accents
+   Type    : Fraunces (display, editorial serif) + Manrope (UI sans)
+   Loaded once from layouts/base.html — never add page-scoped <style> blocks.
+   ========================================================================== */
+

@@ -1,0 +1,13 @@
+<!-- ==========================================================================
+     components/lightbox.html — modal image viewer for the gallery (shared)
+     --------------------------------------------------------------------------
+     No tokens. assets/js/main.js binds any element carrying [data-lightbox]
+     and reads its data-full / data-title / data-cat attributes.
+     ========================================================================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" aria-label="Close image viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img src="assets/images/u-classroom.jpg" alt="" />
+  <div class="lb-cap"><small></small><b></b></div>
+</div>
